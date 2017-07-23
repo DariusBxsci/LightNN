@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/axtyax/Projects/LightNN
+CMAKE_SOURCE_DIR = /home/axtyax/Projects/LightNet
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/axtyax/Projects/LightNN/build
+CMAKE_BINARY_DIR = /home/axtyax/Projects/LightNet/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,9 +124,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/axtyax/Projects/LightNN/build/CMakeFiles /home/axtyax/Projects/LightNN/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/axtyax/Projects/LightNet/build/CMakeFiles /home/axtyax/Projects/LightNet/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/axtyax/Projects/LightNN/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/axtyax/Projects/LightNet/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -168,6 +168,111 @@ LightNet/fast:
 .PHONY : LightNet/fast
 
 # target to build an object file
+include/core/neuron.o:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/neuron.o
+.PHONY : include/core/neuron.o
+
+# target to preprocess a source file
+include/core/neuron.i:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/neuron.i
+.PHONY : include/core/neuron.i
+
+# target to generate assembly for a file
+include/core/neuron.s:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/neuron.s
+.PHONY : include/core/neuron.s
+
+# target to build an object file
+include/core/sharedweight.o:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/sharedweight.o
+.PHONY : include/core/sharedweight.o
+
+# target to preprocess a source file
+include/core/sharedweight.i:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/sharedweight.i
+.PHONY : include/core/sharedweight.i
+
+# target to generate assembly for a file
+include/core/sharedweight.s:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/sharedweight.s
+.PHONY : include/core/sharedweight.s
+
+# target to build an object file
+include/core/weight.o:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/weight.o
+.PHONY : include/core/weight.o
+
+# target to preprocess a source file
+include/core/weight.i:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/weight.i
+.PHONY : include/core/weight.i
+
+# target to generate assembly for a file
+include/core/weight.s:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/weight.s
+.PHONY : include/core/weight.s
+
+# target to build an object file
+include/modules/ConvolutionModule.o:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o
+.PHONY : include/modules/ConvolutionModule.o
+
+# target to preprocess a source file
+include/modules/ConvolutionModule.i:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.i
+.PHONY : include/modules/ConvolutionModule.i
+
+# target to generate assembly for a file
+include/modules/ConvolutionModule.s:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.s
+.PHONY : include/modules/ConvolutionModule.s
+
+# target to build an object file
+include/modules/FeedforwardModule.o:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o
+.PHONY : include/modules/FeedforwardModule.o
+
+# target to preprocess a source file
+include/modules/FeedforwardModule.i:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.i
+.PHONY : include/modules/FeedforwardModule.i
+
+# target to generate assembly for a file
+include/modules/FeedforwardModule.s:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.s
+.PHONY : include/modules/FeedforwardModule.s
+
+# target to build an object file
+include/modules/FunctionModule.o:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/FunctionModule.o
+.PHONY : include/modules/FunctionModule.o
+
+# target to preprocess a source file
+include/modules/FunctionModule.i:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/FunctionModule.i
+.PHONY : include/modules/FunctionModule.i
+
+# target to generate assembly for a file
+include/modules/FunctionModule.s:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/FunctionModule.s
+.PHONY : include/modules/FunctionModule.s
+
+# target to build an object file
+include/modules/module.o:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/module.o
+.PHONY : include/modules/module.o
+
+# target to preprocess a source file
+include/modules/module.i:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/module.i
+.PHONY : include/modules/module.i
+
+# target to generate assembly for a file
+include/modules/module.s:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/module.s
+.PHONY : include/modules/module.s
+
+# target to build an object file
 include/network.o:
 	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/network.o
 .PHONY : include/network.o
@@ -195,6 +300,27 @@ help:
 	@echo "... install/local"
 	@echo "... LightNet"
 	@echo "... edit_cache"
+	@echo "... include/core/neuron.o"
+	@echo "... include/core/neuron.i"
+	@echo "... include/core/neuron.s"
+	@echo "... include/core/sharedweight.o"
+	@echo "... include/core/sharedweight.i"
+	@echo "... include/core/sharedweight.s"
+	@echo "... include/core/weight.o"
+	@echo "... include/core/weight.i"
+	@echo "... include/core/weight.s"
+	@echo "... include/modules/ConvolutionModule.o"
+	@echo "... include/modules/ConvolutionModule.i"
+	@echo "... include/modules/ConvolutionModule.s"
+	@echo "... include/modules/FeedforwardModule.o"
+	@echo "... include/modules/FeedforwardModule.i"
+	@echo "... include/modules/FeedforwardModule.s"
+	@echo "... include/modules/FunctionModule.o"
+	@echo "... include/modules/FunctionModule.i"
+	@echo "... include/modules/FunctionModule.s"
+	@echo "... include/modules/module.o"
+	@echo "... include/modules/module.i"
+	@echo "... include/modules/module.s"
 	@echo "... include/network.o"
 	@echo "... include/network.i"
 	@echo "... include/network.s"

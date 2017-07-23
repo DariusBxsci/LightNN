@@ -1,5 +1,5 @@
 #ifndef LIGHTNET_FUNCTION_H
-#ifndef LIGHTNET_FUNCTION_H
+#define LIGHTNET_FUNCTION_H
 
 class Function {
 

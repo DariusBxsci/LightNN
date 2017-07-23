@@ -2,24 +2,29 @@
 #define LIGHTNET_MODULE_H
 
 #include <vector>
-#include "core/neuron.h"
-#include "functions/function.h"
+#include "../core/neuron.h"
 using namespace std;
 
 class Module {
 
-  private:
+  protected:
+
+    vector<Neuron*> neurons;
+
   public:
 
-    virtual void connect(Module* next) =0;
-    virtual void process(vector<double> input) =0;
-    virtual void process() =0;
-    virtual void backPropagate(vector<double> delta) =0;
-    virtual void backPropagate() =0;
-    virtual void gradientDescent(double learningRate) =0;
-    virtual vector<double> getOutput() =0;
-    virtual int getInputSize() =0;
-    virtual int getOutputSize() =0;
+    virtual void connect(Module* prev) =0;
+
+    void process(vector<double> input);
+    void process();
+    void backPropagate(vector<double> delta);
+    void backPropagate();
+    void gradientDescent(double learningRate);
+    void clearDelta();
+    vector<Neuron*>& getNeurons();
+    vector<double> getValue();
+    int getSize();
+    ~Module();
 
 };
 

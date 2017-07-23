@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 2.4.0)
+set(CMAKE_CXX_STANDARD 11)
 
 project(LightNet)
 
 # Find source files
-file(GLOB SOURCES include/*.cpp)
+file(GLOB SOURCES include/*.cpp include/*/*.cpp)
 
 # Include header files
 include_directories(include)
@@ -12,13 +13,7 @@ include_directories(include)
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
 
 # Install library
-install(TARGETS ${PROJECT_NAME} DESTINATION lib/${PROJECT_NAME})
-
-# Install library headers
-file(GLOB HEADERS include/*.h)
 install(TARGETS LightNet
-  EXPORT LightNet
-  RUNTIME DESTINATION bin
   LIBRARY DESTINATION lib
-  ARCHIVE DESTINATION lib)
-
+)
+install(DIRECTORY include/ DESTINATION /usr/local/include/LightNet)

@@ -4,7 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/axtyax/Projects/LightNN/include/network.cpp" "/home/axtyax/Projects/LightNN/build/CMakeFiles/LightNet.dir/include/network.o"
+  "/home/axtyax/Projects/LightNet/include/core/neuron.cpp" "/home/axtyax/Projects/LightNet/build/CMakeFiles/LightNet.dir/include/core/neuron.o"
+  "/home/axtyax/Projects/LightNet/include/core/sharedweight.cpp" "/home/axtyax/Projects/LightNet/build/CMakeFiles/LightNet.dir/include/core/sharedweight.o"
+  "/home/axtyax/Projects/LightNet/include/core/weight.cpp" "/home/axtyax/Projects/LightNet/build/CMakeFiles/LightNet.dir/include/core/weight.o"
+  "/home/axtyax/Projects/LightNet/include/modules/ConvolutionModule.cpp" "/home/axtyax/Projects/LightNet/build/CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o"
+  "/home/axtyax/Projects/LightNet/include/modules/FeedforwardModule.cpp" "/home/axtyax/Projects/LightNet/build/CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o"
+  "/home/axtyax/Projects/LightNet/include/modules/FunctionModule.cpp" "/home/axtyax/Projects/LightNet/build/CMakeFiles/LightNet.dir/include/modules/FunctionModule.o"
+  "/home/axtyax/Projects/LightNet/include/modules/module.cpp" "/home/axtyax/Projects/LightNet/build/CMakeFiles/LightNet.dir/include/modules/module.o"
+  "/home/axtyax/Projects/LightNet/include/network.cpp" "/home/axtyax/Projects/LightNet/build/CMakeFiles/LightNet.dir/include/network.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

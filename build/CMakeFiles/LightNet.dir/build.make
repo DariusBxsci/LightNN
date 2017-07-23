@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/axtyax/Projects/LightNN
+CMAKE_SOURCE_DIR = /home/axtyax/Projects/LightNet
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/axtyax/Projects/LightNN/build
+CMAKE_BINARY_DIR = /home/axtyax/Projects/LightNet/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/LightNet.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/LightNet.dir/flags.make
 
 CMakeFiles/LightNet.dir/include/network.o: CMakeFiles/LightNet.dir/flags.make
 CMakeFiles/LightNet.dir/include/network.o: ../include/network.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axtyax/Projects/LightNN/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LightNet.dir/include/network.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LightNet.dir/include/network.o -c /home/axtyax/Projects/LightNN/include/network.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axtyax/Projects/LightNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LightNet.dir/include/network.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LightNet.dir/include/network.o -c /home/axtyax/Projects/LightNet/include/network.cpp
 
 CMakeFiles/LightNet.dir/include/network.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LightNet.dir/include/network.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axtyax/Projects/LightNN/include/network.cpp > CMakeFiles/LightNet.dir/include/network.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axtyax/Projects/LightNet/include/network.cpp > CMakeFiles/LightNet.dir/include/network.i
 
 CMakeFiles/LightNet.dir/include/network.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LightNet.dir/include/network.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axtyax/Projects/LightNN/include/network.cpp -o CMakeFiles/LightNet.dir/include/network.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axtyax/Projects/LightNet/include/network.cpp -o CMakeFiles/LightNet.dir/include/network.s
 
 CMakeFiles/LightNet.dir/include/network.o.requires:
 
@@ -81,17 +81,199 @@ CMakeFiles/LightNet.dir/include/network.o.provides: CMakeFiles/LightNet.dir/incl
 CMakeFiles/LightNet.dir/include/network.o.provides.build: CMakeFiles/LightNet.dir/include/network.o
 
 
+CMakeFiles/LightNet.dir/include/core/weight.o: CMakeFiles/LightNet.dir/flags.make
+CMakeFiles/LightNet.dir/include/core/weight.o: ../include/core/weight.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axtyax/Projects/LightNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LightNet.dir/include/core/weight.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LightNet.dir/include/core/weight.o -c /home/axtyax/Projects/LightNet/include/core/weight.cpp
+
+CMakeFiles/LightNet.dir/include/core/weight.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LightNet.dir/include/core/weight.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axtyax/Projects/LightNet/include/core/weight.cpp > CMakeFiles/LightNet.dir/include/core/weight.i
+
+CMakeFiles/LightNet.dir/include/core/weight.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LightNet.dir/include/core/weight.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axtyax/Projects/LightNet/include/core/weight.cpp -o CMakeFiles/LightNet.dir/include/core/weight.s
+
+CMakeFiles/LightNet.dir/include/core/weight.o.requires:
+
+.PHONY : CMakeFiles/LightNet.dir/include/core/weight.o.requires
+
+CMakeFiles/LightNet.dir/include/core/weight.o.provides: CMakeFiles/LightNet.dir/include/core/weight.o.requires
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/weight.o.provides.build
+.PHONY : CMakeFiles/LightNet.dir/include/core/weight.o.provides
+
+CMakeFiles/LightNet.dir/include/core/weight.o.provides.build: CMakeFiles/LightNet.dir/include/core/weight.o
+
+
+CMakeFiles/LightNet.dir/include/core/sharedweight.o: CMakeFiles/LightNet.dir/flags.make
+CMakeFiles/LightNet.dir/include/core/sharedweight.o: ../include/core/sharedweight.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axtyax/Projects/LightNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LightNet.dir/include/core/sharedweight.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LightNet.dir/include/core/sharedweight.o -c /home/axtyax/Projects/LightNet/include/core/sharedweight.cpp
+
+CMakeFiles/LightNet.dir/include/core/sharedweight.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LightNet.dir/include/core/sharedweight.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axtyax/Projects/LightNet/include/core/sharedweight.cpp > CMakeFiles/LightNet.dir/include/core/sharedweight.i
+
+CMakeFiles/LightNet.dir/include/core/sharedweight.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LightNet.dir/include/core/sharedweight.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axtyax/Projects/LightNet/include/core/sharedweight.cpp -o CMakeFiles/LightNet.dir/include/core/sharedweight.s
+
+CMakeFiles/LightNet.dir/include/core/sharedweight.o.requires:
+
+.PHONY : CMakeFiles/LightNet.dir/include/core/sharedweight.o.requires
+
+CMakeFiles/LightNet.dir/include/core/sharedweight.o.provides: CMakeFiles/LightNet.dir/include/core/sharedweight.o.requires
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/sharedweight.o.provides.build
+.PHONY : CMakeFiles/LightNet.dir/include/core/sharedweight.o.provides
+
+CMakeFiles/LightNet.dir/include/core/sharedweight.o.provides.build: CMakeFiles/LightNet.dir/include/core/sharedweight.o
+
+
+CMakeFiles/LightNet.dir/include/core/neuron.o: CMakeFiles/LightNet.dir/flags.make
+CMakeFiles/LightNet.dir/include/core/neuron.o: ../include/core/neuron.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axtyax/Projects/LightNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LightNet.dir/include/core/neuron.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LightNet.dir/include/core/neuron.o -c /home/axtyax/Projects/LightNet/include/core/neuron.cpp
+
+CMakeFiles/LightNet.dir/include/core/neuron.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LightNet.dir/include/core/neuron.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axtyax/Projects/LightNet/include/core/neuron.cpp > CMakeFiles/LightNet.dir/include/core/neuron.i
+
+CMakeFiles/LightNet.dir/include/core/neuron.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LightNet.dir/include/core/neuron.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axtyax/Projects/LightNet/include/core/neuron.cpp -o CMakeFiles/LightNet.dir/include/core/neuron.s
+
+CMakeFiles/LightNet.dir/include/core/neuron.o.requires:
+
+.PHONY : CMakeFiles/LightNet.dir/include/core/neuron.o.requires
+
+CMakeFiles/LightNet.dir/include/core/neuron.o.provides: CMakeFiles/LightNet.dir/include/core/neuron.o.requires
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/neuron.o.provides.build
+.PHONY : CMakeFiles/LightNet.dir/include/core/neuron.o.provides
+
+CMakeFiles/LightNet.dir/include/core/neuron.o.provides.build: CMakeFiles/LightNet.dir/include/core/neuron.o
+
+
+CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o: CMakeFiles/LightNet.dir/flags.make
+CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o: ../include/modules/ConvolutionModule.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axtyax/Projects/LightNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o -c /home/axtyax/Projects/LightNet/include/modules/ConvolutionModule.cpp
+
+CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axtyax/Projects/LightNet/include/modules/ConvolutionModule.cpp > CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.i
+
+CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axtyax/Projects/LightNet/include/modules/ConvolutionModule.cpp -o CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.s
+
+CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o.requires:
+
+.PHONY : CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o.requires
+
+CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o.provides: CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o.requires
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o.provides.build
+.PHONY : CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o.provides
+
+CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o.provides.build: CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o
+
+
+CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o: CMakeFiles/LightNet.dir/flags.make
+CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o: ../include/modules/FeedforwardModule.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axtyax/Projects/LightNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o -c /home/axtyax/Projects/LightNet/include/modules/FeedforwardModule.cpp
+
+CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axtyax/Projects/LightNet/include/modules/FeedforwardModule.cpp > CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.i
+
+CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axtyax/Projects/LightNet/include/modules/FeedforwardModule.cpp -o CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.s
+
+CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o.requires:
+
+.PHONY : CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o.requires
+
+CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o.provides: CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o.requires
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o.provides.build
+.PHONY : CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o.provides
+
+CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o.provides.build: CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o
+
+
+CMakeFiles/LightNet.dir/include/modules/module.o: CMakeFiles/LightNet.dir/flags.make
+CMakeFiles/LightNet.dir/include/modules/module.o: ../include/modules/module.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axtyax/Projects/LightNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LightNet.dir/include/modules/module.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LightNet.dir/include/modules/module.o -c /home/axtyax/Projects/LightNet/include/modules/module.cpp
+
+CMakeFiles/LightNet.dir/include/modules/module.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LightNet.dir/include/modules/module.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axtyax/Projects/LightNet/include/modules/module.cpp > CMakeFiles/LightNet.dir/include/modules/module.i
+
+CMakeFiles/LightNet.dir/include/modules/module.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LightNet.dir/include/modules/module.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axtyax/Projects/LightNet/include/modules/module.cpp -o CMakeFiles/LightNet.dir/include/modules/module.s
+
+CMakeFiles/LightNet.dir/include/modules/module.o.requires:
+
+.PHONY : CMakeFiles/LightNet.dir/include/modules/module.o.requires
+
+CMakeFiles/LightNet.dir/include/modules/module.o.provides: CMakeFiles/LightNet.dir/include/modules/module.o.requires
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/module.o.provides.build
+.PHONY : CMakeFiles/LightNet.dir/include/modules/module.o.provides
+
+CMakeFiles/LightNet.dir/include/modules/module.o.provides.build: CMakeFiles/LightNet.dir/include/modules/module.o
+
+
+CMakeFiles/LightNet.dir/include/modules/FunctionModule.o: CMakeFiles/LightNet.dir/flags.make
+CMakeFiles/LightNet.dir/include/modules/FunctionModule.o: ../include/modules/FunctionModule.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axtyax/Projects/LightNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LightNet.dir/include/modules/FunctionModule.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LightNet.dir/include/modules/FunctionModule.o -c /home/axtyax/Projects/LightNet/include/modules/FunctionModule.cpp
+
+CMakeFiles/LightNet.dir/include/modules/FunctionModule.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LightNet.dir/include/modules/FunctionModule.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axtyax/Projects/LightNet/include/modules/FunctionModule.cpp > CMakeFiles/LightNet.dir/include/modules/FunctionModule.i
+
+CMakeFiles/LightNet.dir/include/modules/FunctionModule.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LightNet.dir/include/modules/FunctionModule.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axtyax/Projects/LightNet/include/modules/FunctionModule.cpp -o CMakeFiles/LightNet.dir/include/modules/FunctionModule.s
+
+CMakeFiles/LightNet.dir/include/modules/FunctionModule.o.requires:
+
+.PHONY : CMakeFiles/LightNet.dir/include/modules/FunctionModule.o.requires
+
+CMakeFiles/LightNet.dir/include/modules/FunctionModule.o.provides: CMakeFiles/LightNet.dir/include/modules/FunctionModule.o.requires
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/FunctionModule.o.provides.build
+.PHONY : CMakeFiles/LightNet.dir/include/modules/FunctionModule.o.provides
+
+CMakeFiles/LightNet.dir/include/modules/FunctionModule.o.provides.build: CMakeFiles/LightNet.dir/include/modules/FunctionModule.o
+
+
 # Object files for target LightNet
 LightNet_OBJECTS = \
-"CMakeFiles/LightNet.dir/include/network.o"
+"CMakeFiles/LightNet.dir/include/network.o" \
+"CMakeFiles/LightNet.dir/include/core/weight.o" \
+"CMakeFiles/LightNet.dir/include/core/sharedweight.o" \
+"CMakeFiles/LightNet.dir/include/core/neuron.o" \
+"CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o" \
+"CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o" \
+"CMakeFiles/LightNet.dir/include/modules/module.o" \
+"CMakeFiles/LightNet.dir/include/modules/FunctionModule.o"
 
 # External object files for target LightNet
 LightNet_EXTERNAL_OBJECTS =
 
 libLightNet.so: CMakeFiles/LightNet.dir/include/network.o
+libLightNet.so: CMakeFiles/LightNet.dir/include/core/weight.o
+libLightNet.so: CMakeFiles/LightNet.dir/include/core/sharedweight.o
+libLightNet.so: CMakeFiles/LightNet.dir/include/core/neuron.o
+libLightNet.so: CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o
+libLightNet.so: CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o
+libLightNet.so: CMakeFiles/LightNet.dir/include/modules/module.o
+libLightNet.so: CMakeFiles/LightNet.dir/include/modules/FunctionModule.o
 libLightNet.so: CMakeFiles/LightNet.dir/build.make
 libLightNet.so: CMakeFiles/LightNet.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/axtyax/Projects/LightNN/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libLightNet.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/axtyax/Projects/LightNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared library libLightNet.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LightNet.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -100,6 +282,13 @@ CMakeFiles/LightNet.dir/build: libLightNet.so
 .PHONY : CMakeFiles/LightNet.dir/build
 
 CMakeFiles/LightNet.dir/requires: CMakeFiles/LightNet.dir/include/network.o.requires
+CMakeFiles/LightNet.dir/requires: CMakeFiles/LightNet.dir/include/core/weight.o.requires
+CMakeFiles/LightNet.dir/requires: CMakeFiles/LightNet.dir/include/core/sharedweight.o.requires
+CMakeFiles/LightNet.dir/requires: CMakeFiles/LightNet.dir/include/core/neuron.o.requires
+CMakeFiles/LightNet.dir/requires: CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o.requires
+CMakeFiles/LightNet.dir/requires: CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o.requires
+CMakeFiles/LightNet.dir/requires: CMakeFiles/LightNet.dir/include/modules/module.o.requires
+CMakeFiles/LightNet.dir/requires: CMakeFiles/LightNet.dir/include/modules/FunctionModule.o.requires
 
 .PHONY : CMakeFiles/LightNet.dir/requires
 
@@ -108,6 +297,6 @@ CMakeFiles/LightNet.dir/clean:
 .PHONY : CMakeFiles/LightNet.dir/clean
 
 CMakeFiles/LightNet.dir/depend:
-	cd /home/axtyax/Projects/LightNN/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/axtyax/Projects/LightNN /home/axtyax/Projects/LightNN /home/axtyax/Projects/LightNN/build /home/axtyax/Projects/LightNN/build /home/axtyax/Projects/LightNN/build/CMakeFiles/LightNet.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/axtyax/Projects/LightNet/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/axtyax/Projects/LightNet /home/axtyax/Projects/LightNet /home/axtyax/Projects/LightNet/build /home/axtyax/Projects/LightNet/build /home/axtyax/Projects/LightNet/build/CMakeFiles/LightNet.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/LightNet.dir/depend
 

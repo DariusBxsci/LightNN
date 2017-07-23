@@ -1,0 +1,12 @@
+#include <iostream>
+#include <LightNet/standard.h>
+using namespace std;
+
+int main() {
+
+  ln::Network test_net;
+
+  cout << "Hello World" << endl;
+
+  return 0;
+}

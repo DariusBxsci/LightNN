@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/axtyax/Projects/LightNN/examples/mnist/mnist.cpp" "/home/axtyax/Projects/LightNN/examples/mnist/CMakeFiles/mnist.dir/mnist.o"
+  "/home/axtyax/Projects/LightNet/examples/mnist/mnist.cpp" "/home/axtyax/Projects/LightNet/examples/mnist/CMakeFiles/mnist.dir/mnist.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

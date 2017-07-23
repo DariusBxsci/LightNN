@@ -1,3 +1,3 @@
-/home/axtyax/Projects/LightNN/examples/mnist/CMakeFiles/edit_cache.dir
-/home/axtyax/Projects/LightNN/examples/mnist/CMakeFiles/rebuild_cache.dir
-/home/axtyax/Projects/LightNN/examples/mnist/CMakeFiles/mnist.dir
+/home/axtyax/Projects/LightNet/examples/mnist/CMakeFiles/edit_cache.dir
+/home/axtyax/Projects/LightNet/examples/mnist/CMakeFiles/rebuild_cache.dir
+/home/axtyax/Projects/LightNet/examples/mnist/CMakeFiles/mnist.dir
