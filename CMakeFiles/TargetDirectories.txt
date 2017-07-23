@@ -1,7 +1,0 @@
-/home/axtyax/Projects/LightNN/CMakeFiles/install.dir
-/home/axtyax/Projects/LightNN/CMakeFiles/list_install_components.dir
-/home/axtyax/Projects/LightNN/CMakeFiles/rebuild_cache.dir
-/home/axtyax/Projects/LightNN/CMakeFiles/LightNN.dir
-/home/axtyax/Projects/LightNN/CMakeFiles/edit_cache.dir
-/home/axtyax/Projects/LightNN/CMakeFiles/install/strip.dir
-/home/axtyax/Projects/LightNN/CMakeFiles/install/local.dir
