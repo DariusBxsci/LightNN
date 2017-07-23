@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/mnist.dir/mnist.o  -o mnist -rdynamic -lLightNet 

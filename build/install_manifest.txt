@@ -1,0 +1,2 @@
+/usr/local/lib/LightNet/libLightNet.so
+/usr/local/lib/libLightNet.so

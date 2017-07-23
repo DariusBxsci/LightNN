@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC   -shared -Wl,-soname,libLightNN.so -o libLightNN.so CMakeFiles/LightNN.dir/include/network.o 
