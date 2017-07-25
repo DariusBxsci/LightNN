@@ -34,12 +34,12 @@ double Network::getError(Example ex) {
   return classifier->getError(logit,ex.output);
 }
 
-double Network::getError(vector<Example> ex) {
+double Network::getError(TrainingSet ex) {
   double err = 0;
-  for(unsigned int x = 0; x < ex.size(); x++) {
-    err += getError(ex[x]);
+  for(unsigned int x = 0; x < ex.examples.size(); x++) {
+    err += getError(ex.examples[x]);
   }
-  return err/ex.size();
+  return err/ex.examples.size();
 }
 
 void Network::backPropagate(Example ex) {
@@ -57,10 +57,10 @@ void Network::gradientDescent(double learningRate, Optimizer* optimizer) {
   }
 }
 
-double Network::train(vector<Example> trainingset, Optimizer* optimizer, int iterations, int batch_size, double learningRate) {
+double Network::train(TrainingSet trainingset, Optimizer* optimizer, int iterations, int batch_size, double learningRate) {
   for (int i = 0; i < iterations; i++) {
     for(int b = 0; b < batch_size; b++) {
-      backPropagate(trainingset[rand()%trainingset.size()]);
+      backPropagate(trainingset.examples[rand()%trainingset.examples.size()]);
     }
     gradientDescent(learningRate,optimizer);
     clearDelta();

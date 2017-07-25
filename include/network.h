@@ -13,6 +13,19 @@ struct Example {
 
 };
 
+struct TrainingSet {
+
+  vector<Example> examples;
+
+  void add(vector<double> in, vector<double> out) {
+    Example ex;
+    ex.input = in;
+    ex.output = out;
+    examples.push_back(ex);
+  }
+
+};
+
 class Network {
 
   private:
@@ -30,10 +43,10 @@ class Network {
     void addClassifier(Classifier*);
     vector<double> process(vector<double>);
     double getError(Example);
-    double getError(vector<Example>);
+    double getError(TrainingSet);
     void backPropagate(Example);
     void gradientDescent(double learningRate, Optimizer*);
-    double train(vector<Example>, Optimizer*, int, int, double);
+    double train(TrainingSet, Optimizer*, int, int, double);
     void clearDelta();
     ~Network();
 
