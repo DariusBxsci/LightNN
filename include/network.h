@@ -32,8 +32,8 @@ class Network {
     double getError(Example);
     double getError(vector<Example>);
     void backPropagate(Example);
-    void gradientDescent(double learningRate);
-    double train(vector<Example>, int, int, double);
+    void gradientDescent(double learningRate, Optimizer*);
+    double train(vector<Example>, Optimizer*, int, int, double);
     void clearDelta();
     ~Network();
 

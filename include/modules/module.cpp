@@ -10,6 +10,7 @@ void Module::process() {
   for(unsigned int x = 0; x < neurons.size(); x++) {
     neurons[x]->process();
   }
+  //cout << " " << neurons.size() << endl;
 }
 
 void Module::backPropagate(vector<double> delta) {
@@ -24,9 +25,9 @@ void Module::backPropagate() {
   }
 }
 
-void Module::gradientDescent(double learningRate) {
+void Module::gradientDescent(double learningRate, Optimizer* optimizer) {
   for(unsigned int x = 0; x < neurons.size(); x++) {
-    neurons[x]->gradientDescent(learningRate);
+    neurons[x]->gradientDescent(learningRate,optimizer);
   }
 }
 

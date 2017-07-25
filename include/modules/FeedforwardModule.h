@@ -14,6 +14,7 @@ class FeedforwardModule : public Module {
   public:
 
     FeedforwardModule(int,double,double);
+    FeedforwardModule(int);
     void connect(Module* prev);
 
 };

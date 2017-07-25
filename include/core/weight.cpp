@@ -4,7 +4,10 @@
 Weight::Weight(double lb, double ub) {
   delta = 0;
   fullDelta = 0;
-  weight = (rand() % (int)(ub*100000*2) + lb*100000.0)/100000.0;
+  batch_size = 0;
+  if (abs(lb-ub) == 0) weight = lb;
+  else weight = (rand() % (int)(abs(lb-ub)*100000) + lb*100000.0)/100000.0;
+  //cout << weight << endl;
   //weight = 1;
   //generate weight in range to the hundred thousandths place
 }
@@ -19,13 +22,15 @@ double Weight::process() {
 }
 
 void Weight::backPropagate(double d) {
-  delta = d*lastInput;
-  fullDelta += delta;
+  delta = weight*d; //pass back
+  //cout << lastInput << endl;
+  fullDelta += d*lastInput;
+  batch_size++;
 }
 
-void Weight::gradientDescent(double learningRate) {
+void Weight::gradientDescent(double learningRate, Optimizer* optimizer) {
   //cout << fullDelta << endl;
-  weight -= learningRate*fullDelta; //use full delta because of batch gradients
+  weight = optimizer->optimize(weight,fullDelta/batch_size,learningRate); //use full delta because of batch gradients
 }
 
 double Weight::getDelta() {
@@ -35,4 +40,5 @@ double Weight::getDelta() {
 void Weight::clearDelta() {
   delta = 0;
   fullDelta = 0;
+  batch_size = 0;
 }

@@ -10,12 +10,12 @@ class FunctionModule : public Module {
   private:
 
     Function* function;
-    vector<Neuron*> neurons;
 
   public:
 
     FunctionModule(Function*);
     void connect(Module* prev);
+    ~FunctionModule();
 
 };
 

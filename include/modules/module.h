@@ -19,7 +19,7 @@ class Module {
     void process();
     void backPropagate(vector<double> delta);
     void backPropagate();
-    void gradientDescent(double learningRate);
+    void gradientDescent(double learningRate, Optimizer*);
     void clearDelta();
     vector<Neuron*>& getNeurons();
     vector<double> getValue();

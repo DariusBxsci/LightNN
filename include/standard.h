@@ -6,5 +6,8 @@
 #include "modules/FunctionModule.h"
 #include "modules/ConvolutionModule.h"
 #include "classifiers/StandardClassifier.h"
+#include "optimizers/StandardOptimizer.h"
+#include "functions/SigmoidFunction.h"
+#include "functions/ReluFunction.h"
 
 #endif

@@ -7,6 +7,7 @@
 #include <vector>
 #include <deque>
 #include <iostream>
+#include "../optimizers/optimizer.h"
 using namespace std;
 
 class Neuron;
@@ -19,6 +20,7 @@ class Weight {
     double weight;
     double delta;
     double fullDelta; //stores sum of many deltas (for batch gradientDescent)
+    int batch_size;
     double lastInput;
 
   public:
@@ -27,7 +29,7 @@ class Weight {
     void connect(Neuron*);
     double process(); //process value from previous neuron
     void backPropagate(double); //back propagate delta from next neuron
-    void gradientDescent(double); //perform gradient descent on weight based on delta
+    void gradientDescent(double, Optimizer*); //perform gradient descent on weight based on delta
     double getDelta();
     void clearDelta(); //set delta to 0;
 

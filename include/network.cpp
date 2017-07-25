@@ -51,18 +51,18 @@ void Network::backPropagate(Example ex) {
   }
 }
 
-void Network::gradientDescent(double learningRate) {
+void Network::gradientDescent(double learningRate, Optimizer* optimizer) {
   for (unsigned int x = 0; x < modules.size(); x++) {
-    modules[x]->gradientDescent(learningRate);
+    modules[x]->gradientDescent(learningRate, optimizer);
   }
 }
 
-double Network::train(vector<Example> trainingset, int iterations, int batch_size, double learningRate) {
+double Network::train(vector<Example> trainingset, Optimizer* optimizer, int iterations, int batch_size, double learningRate) {
   for (int i = 0; i < iterations; i++) {
     for(int b = 0; b < batch_size; b++) {
       backPropagate(trainingset[rand()%trainingset.size()]);
     }
-    gradientDescent(learningRate);
+    gradientDescent(learningRate,optimizer);
     clearDelta();
   }
 }

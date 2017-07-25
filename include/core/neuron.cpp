@@ -1,9 +1,18 @@
 #include "neuron.h"
 
 Neuron::Neuron(double lb, double ub) {
+  isfunction = false;
   delta = 0;
   lowerWeightLimit = lb;
   upperWeightLimit = ub;
+}
+
+Neuron::Neuron(Function* function) {
+  isfunction = true;
+  this->function = function;
+  delta = 0;
+  lowerWeightLimit = 1;
+  upperWeightLimit = 1;
 }
 
 void Neuron::connect(Neuron* prev) {
@@ -22,10 +31,13 @@ void Neuron::process() {
   for (unsigned int x = 0; x < weights.size(); x++) {
     value += weights[x]->process();
   }
+  if (isfunction == true) value = function->process(value);
+  //cout << value << endl;
 }
 
 void Neuron::process(double input) {
   value = input;
+  if (isfunction == true) value = function->process(value);
 }
 
 void Neuron::backPropagate() {
@@ -45,9 +57,11 @@ void Neuron::backPropagate(double inDelta) {
   }
 }
 
-void Neuron::gradientDescent(double learningRate) {
-  for (unsigned int x = 0; x < weights.size(); x++) {
-    weights[x]->gradientDescent(learningRate);
+void Neuron::gradientDescent(double learningRate, Optimizer* optimizer) {
+  if (isfunction == false) {
+    for (unsigned int x = 0; x < weights.size(); x++) {
+      weights[x]->gradientDescent(learningRate,optimizer);
+    }
   }
 }
 

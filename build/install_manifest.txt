@@ -1,11 +1,11 @@
 /usr/local/lib/libLightNet.so
 /usr/local/include/LightNet/README.txt
 /usr/local/include/LightNet/standard.h
+/usr/local/include/LightNet/core/SharedWeight.h
 /usr/local/include/LightNet/core/weight.h
-/usr/local/include/LightNet/core/sharedweight.h
 /usr/local/include/LightNet/core/weight.cpp
-/usr/local/include/LightNet/core/sharedweight.cpp
 /usr/local/include/LightNet/core/neuron.cpp
+/usr/local/include/LightNet/core/SharedWeight.cpp
 /usr/local/include/LightNet/core/neuron.h
 /usr/local/include/LightNet/modules/FeedforwardModule.h
 /usr/local/include/LightNet/modules/ConvolutionModule.cpp
@@ -22,3 +22,6 @@
 /usr/local/include/LightNet/functions/ReluFunction.h
 /usr/local/include/LightNet/classifiers/StandardClassifier.h
 /usr/local/include/LightNet/classifiers/classifier.h
+/usr/local/include/LightNet/optimizers/StandardOptimizer.h
+/usr/local/include/LightNet/optimizers/optimizer.h
+/usr/local/include/LightNet/optimizers/NonOptimizer.h

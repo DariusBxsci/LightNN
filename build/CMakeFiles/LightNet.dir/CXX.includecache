@@ -12,6 +12,8 @@ vector
 math.h
 -
 
+/home/axtyax/Projects/LightNet/include/core/SharedWeight.cpp
+
 /home/axtyax/Projects/LightNet/include/core/neuron.cpp
 neuron.h
 /home/axtyax/Projects/LightNet/include/core/neuron.h
@@ -19,8 +21,8 @@ neuron.h
 /home/axtyax/Projects/LightNet/include/core/neuron.h
 weight.h
 /home/axtyax/Projects/LightNet/include/core/weight.h
-
-/home/axtyax/Projects/LightNet/include/core/sharedweight.cpp
+../functions/function.h
+/home/axtyax/Projects/LightNet/include/functions/function.h
 
 /home/axtyax/Projects/LightNet/include/core/weight.cpp
 weight.h
@@ -41,6 +43,10 @@ deque
 -
 iostream
 -
+../optimizers/optimizer.h
+/home/axtyax/Projects/LightNet/include/optimizers/optimizer.h
+
+/home/axtyax/Projects/LightNet/include/functions/function.h
 
 /home/axtyax/Projects/LightNet/include/modules/ConvolutionModule.cpp
 
@@ -53,6 +59,14 @@ module.h
 /home/axtyax/Projects/LightNet/include/modules/module.h
 
 /home/axtyax/Projects/LightNet/include/modules/FunctionModule.cpp
+FunctionModule.h
+/home/axtyax/Projects/LightNet/include/modules/FunctionModule.h
+
+/home/axtyax/Projects/LightNet/include/modules/FunctionModule.h
+module.h
+/home/axtyax/Projects/LightNet/include/modules/module.h
+../functions/function.h
+/home/axtyax/Projects/LightNet/include/functions/function.h
 
 /home/axtyax/Projects/LightNet/include/modules/module.cpp
 module.h
@@ -75,4 +89,6 @@ modules/module.h
 /home/axtyax/Projects/LightNet/include/modules/module.h
 classifiers/classifier.h
 /home/axtyax/Projects/LightNet/include/classifiers/classifier.h
+
+/home/axtyax/Projects/LightNet/include/optimizers/optimizer.h
 

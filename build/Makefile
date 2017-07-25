@@ -168,6 +168,21 @@ LightNet/fast:
 .PHONY : LightNet/fast
 
 # target to build an object file
+include/core/SharedWeight.o:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/SharedWeight.o
+.PHONY : include/core/SharedWeight.o
+
+# target to preprocess a source file
+include/core/SharedWeight.i:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/SharedWeight.i
+.PHONY : include/core/SharedWeight.i
+
+# target to generate assembly for a file
+include/core/SharedWeight.s:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/SharedWeight.s
+.PHONY : include/core/SharedWeight.s
+
+# target to build an object file
 include/core/neuron.o:
 	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/neuron.o
 .PHONY : include/core/neuron.o
@@ -181,21 +196,6 @@ include/core/neuron.i:
 include/core/neuron.s:
 	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/neuron.s
 .PHONY : include/core/neuron.s
-
-# target to build an object file
-include/core/sharedweight.o:
-	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/sharedweight.o
-.PHONY : include/core/sharedweight.o
-
-# target to preprocess a source file
-include/core/sharedweight.i:
-	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/sharedweight.i
-.PHONY : include/core/sharedweight.i
-
-# target to generate assembly for a file
-include/core/sharedweight.s:
-	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/core/sharedweight.s
-.PHONY : include/core/sharedweight.s
 
 # target to build an object file
 include/core/weight.o:
@@ -300,12 +300,12 @@ help:
 	@echo "... install/local"
 	@echo "... LightNet"
 	@echo "... edit_cache"
+	@echo "... include/core/SharedWeight.o"
+	@echo "... include/core/SharedWeight.i"
+	@echo "... include/core/SharedWeight.s"
 	@echo "... include/core/neuron.o"
 	@echo "... include/core/neuron.i"
 	@echo "... include/core/neuron.s"
-	@echo "... include/core/sharedweight.o"
-	@echo "... include/core/sharedweight.i"
-	@echo "... include/core/sharedweight.s"
 	@echo "... include/core/weight.o"
 	@echo "... include/core/weight.i"
 	@echo "... include/core/weight.s"
