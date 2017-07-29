@@ -1,4 +1,4 @@
-cd build; cmake ..; make; sudo make install;
+cd build; cmake .. -Wno-dev; make; sudo make install;
 echo "FINISHED INSTALLING LIGHTNET"
 
 cd ../examples;

@@ -15,6 +15,15 @@ CMakeFiles/LightNet.dir/include/core/weight.o: ../include/core/weight.h
 CMakeFiles/LightNet.dir/include/core/weight.o: ../include/functions/function.h
 CMakeFiles/LightNet.dir/include/core/weight.o: ../include/optimizers/optimizer.h
 
+CMakeFiles/LightNet.dir/include/modules/BiasModule.o: ../include/core/BiasWeight.h
+CMakeFiles/LightNet.dir/include/modules/BiasModule.o: ../include/core/neuron.h
+CMakeFiles/LightNet.dir/include/modules/BiasModule.o: ../include/core/weight.h
+CMakeFiles/LightNet.dir/include/modules/BiasModule.o: ../include/functions/function.h
+CMakeFiles/LightNet.dir/include/modules/BiasModule.o: ../include/modules/BiasModule.cpp
+CMakeFiles/LightNet.dir/include/modules/BiasModule.o: ../include/modules/BiasModule.h
+CMakeFiles/LightNet.dir/include/modules/BiasModule.o: ../include/modules/module.h
+CMakeFiles/LightNet.dir/include/modules/BiasModule.o: ../include/optimizers/optimizer.h
+
 CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o: ../include/modules/ConvolutionModule.cpp
 
 CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o: ../include/core/neuron.h

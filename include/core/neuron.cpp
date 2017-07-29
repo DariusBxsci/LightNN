@@ -15,8 +15,9 @@ Neuron::Neuron(Function* function) {
   upperWeightLimit = 1;
 }
 
-void Neuron::connect(Neuron* prev) {
-  Weight *w = new Weight(lowerWeightLimit, upperWeightLimit);
+void Neuron::connect(Neuron* prev, Weight *weight) {
+  Weight *w = weight;
+  w->init(lowerWeightLimit, upperWeightLimit);
   w->connect(prev);
   prev->forwardConnect(w);
   weights.push_back(w);

@@ -2,6 +2,7 @@
 #define LIGHTNET_NETWORK_H
 
 #include <vector>
+#include <ctime>
 #include "modules/module.h"
 #include "classifiers/classifier.h"
 namespace ln {
@@ -42,8 +43,11 @@ class Network {
     void linkModules();
     void addClassifier(Classifier*);
     vector<double> process(vector<double>);
+    void printOutput();
     double getError(Example);
     double getError(TrainingSet);
+    double getClassError(Example);
+    double getClassError(TrainingSet);
     void backPropagate(Example);
     void gradientDescent(double learningRate, Optimizer*);
     double train(TrainingSet, Optimizer*, int, int, double);

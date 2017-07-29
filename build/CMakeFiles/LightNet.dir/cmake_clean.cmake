@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/LightNet.dir/include/core/SharedWeight.o"
   "CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o"
   "CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o"
+  "CMakeFiles/LightNet.dir/include/modules/BiasModule.o"
   "CMakeFiles/LightNet.dir/include/modules/module.o"
   "CMakeFiles/LightNet.dir/include/modules/FunctionModule.o"
   "libLightNet.pdb"

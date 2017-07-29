@@ -201,9 +201,33 @@ CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o.provides: CMakeFiles
 CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o.provides.build: CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o
 
 
+CMakeFiles/LightNet.dir/include/modules/BiasModule.o: CMakeFiles/LightNet.dir/flags.make
+CMakeFiles/LightNet.dir/include/modules/BiasModule.o: ../include/modules/BiasModule.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axtyax/Projects/LightNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LightNet.dir/include/modules/BiasModule.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LightNet.dir/include/modules/BiasModule.o -c /home/axtyax/Projects/LightNet/include/modules/BiasModule.cpp
+
+CMakeFiles/LightNet.dir/include/modules/BiasModule.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LightNet.dir/include/modules/BiasModule.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axtyax/Projects/LightNet/include/modules/BiasModule.cpp > CMakeFiles/LightNet.dir/include/modules/BiasModule.i
+
+CMakeFiles/LightNet.dir/include/modules/BiasModule.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LightNet.dir/include/modules/BiasModule.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axtyax/Projects/LightNet/include/modules/BiasModule.cpp -o CMakeFiles/LightNet.dir/include/modules/BiasModule.s
+
+CMakeFiles/LightNet.dir/include/modules/BiasModule.o.requires:
+
+.PHONY : CMakeFiles/LightNet.dir/include/modules/BiasModule.o.requires
+
+CMakeFiles/LightNet.dir/include/modules/BiasModule.o.provides: CMakeFiles/LightNet.dir/include/modules/BiasModule.o.requires
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/BiasModule.o.provides.build
+.PHONY : CMakeFiles/LightNet.dir/include/modules/BiasModule.o.provides
+
+CMakeFiles/LightNet.dir/include/modules/BiasModule.o.provides.build: CMakeFiles/LightNet.dir/include/modules/BiasModule.o
+
+
 CMakeFiles/LightNet.dir/include/modules/module.o: CMakeFiles/LightNet.dir/flags.make
 CMakeFiles/LightNet.dir/include/modules/module.o: ../include/modules/module.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axtyax/Projects/LightNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LightNet.dir/include/modules/module.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axtyax/Projects/LightNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LightNet.dir/include/modules/module.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LightNet.dir/include/modules/module.o -c /home/axtyax/Projects/LightNet/include/modules/module.cpp
 
 CMakeFiles/LightNet.dir/include/modules/module.i: cmake_force
@@ -227,7 +251,7 @@ CMakeFiles/LightNet.dir/include/modules/module.o.provides.build: CMakeFiles/Ligh
 
 CMakeFiles/LightNet.dir/include/modules/FunctionModule.o: CMakeFiles/LightNet.dir/flags.make
 CMakeFiles/LightNet.dir/include/modules/FunctionModule.o: ../include/modules/FunctionModule.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axtyax/Projects/LightNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LightNet.dir/include/modules/FunctionModule.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/axtyax/Projects/LightNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LightNet.dir/include/modules/FunctionModule.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LightNet.dir/include/modules/FunctionModule.o -c /home/axtyax/Projects/LightNet/include/modules/FunctionModule.cpp
 
 CMakeFiles/LightNet.dir/include/modules/FunctionModule.i: cmake_force
@@ -257,6 +281,7 @@ LightNet_OBJECTS = \
 "CMakeFiles/LightNet.dir/include/core/SharedWeight.o" \
 "CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o" \
 "CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o" \
+"CMakeFiles/LightNet.dir/include/modules/BiasModule.o" \
 "CMakeFiles/LightNet.dir/include/modules/module.o" \
 "CMakeFiles/LightNet.dir/include/modules/FunctionModule.o"
 
@@ -269,11 +294,12 @@ libLightNet.so: CMakeFiles/LightNet.dir/include/core/neuron.o
 libLightNet.so: CMakeFiles/LightNet.dir/include/core/SharedWeight.o
 libLightNet.so: CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o
 libLightNet.so: CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o
+libLightNet.so: CMakeFiles/LightNet.dir/include/modules/BiasModule.o
 libLightNet.so: CMakeFiles/LightNet.dir/include/modules/module.o
 libLightNet.so: CMakeFiles/LightNet.dir/include/modules/FunctionModule.o
 libLightNet.so: CMakeFiles/LightNet.dir/build.make
 libLightNet.so: CMakeFiles/LightNet.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/axtyax/Projects/LightNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared library libLightNet.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/axtyax/Projects/LightNet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX shared library libLightNet.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LightNet.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -287,6 +313,7 @@ CMakeFiles/LightNet.dir/requires: CMakeFiles/LightNet.dir/include/core/neuron.o.
 CMakeFiles/LightNet.dir/requires: CMakeFiles/LightNet.dir/include/core/SharedWeight.o.requires
 CMakeFiles/LightNet.dir/requires: CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o.requires
 CMakeFiles/LightNet.dir/requires: CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o.requires
+CMakeFiles/LightNet.dir/requires: CMakeFiles/LightNet.dir/include/modules/BiasModule.o.requires
 CMakeFiles/LightNet.dir/requires: CMakeFiles/LightNet.dir/include/modules/module.o.requires
 CMakeFiles/LightNet.dir/requires: CMakeFiles/LightNet.dir/include/modules/FunctionModule.o.requires
 

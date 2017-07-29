@@ -9,7 +9,7 @@ void FunctionModule::connect(Module* prev) {
     neurons.push_back(new Neuron(function));
   }
   for(unsigned int x = 0; x < prev->getNeurons().size(); x++) {
-    neurons[x]->connect(prev->getNeurons()[x]);
+    neurons[x]->connect(prev->getNeurons()[x], new Weight());
   }
 }
 

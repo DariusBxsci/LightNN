@@ -213,6 +213,21 @@ include/core/weight.s:
 .PHONY : include/core/weight.s
 
 # target to build an object file
+include/modules/BiasModule.o:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/BiasModule.o
+.PHONY : include/modules/BiasModule.o
+
+# target to preprocess a source file
+include/modules/BiasModule.i:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/BiasModule.i
+.PHONY : include/modules/BiasModule.i
+
+# target to generate assembly for a file
+include/modules/BiasModule.s:
+	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/BiasModule.s
+.PHONY : include/modules/BiasModule.s
+
+# target to build an object file
 include/modules/ConvolutionModule.o:
 	$(MAKE) -f CMakeFiles/LightNet.dir/build.make CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o
 .PHONY : include/modules/ConvolutionModule.o
@@ -309,6 +324,9 @@ help:
 	@echo "... include/core/weight.o"
 	@echo "... include/core/weight.i"
 	@echo "... include/core/weight.s"
+	@echo "... include/modules/BiasModule.o"
+	@echo "... include/modules/BiasModule.i"
+	@echo "... include/modules/BiasModule.s"
 	@echo "... include/modules/ConvolutionModule.o"
 	@echo "... include/modules/ConvolutionModule.i"
 	@echo "... include/modules/ConvolutionModule.s"

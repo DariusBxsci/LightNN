@@ -14,7 +14,7 @@ class Neuron;
 
 class Weight {
 
-  private:
+  protected:
 
     Neuron* previous;
     double weight;
@@ -25,11 +25,13 @@ class Weight {
 
   public:
 
+    Weight(); //bounds for randomly generated weight values
     Weight(double, double); //bounds for randomly generated weight values
-    void connect(Neuron*);
-    double process(); //process value from previous neuron
-    void backPropagate(double); //back propagate delta from next neuron
-    void gradientDescent(double, Optimizer*); //perform gradient descent on weight based on delta
+    virtual void init(double, double); //bounds for randomly generated weight values
+    virtual void connect(Neuron*);
+    virtual double process(); //process value from previous neuron
+    virtual void backPropagate(double); //back propagate delta from next neuron
+    virtual void gradientDescent(double, Optimizer*); //perform gradient descent on weight based on delta
     double getDelta();
     void clearDelta(); //set delta to 0;
 

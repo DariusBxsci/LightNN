@@ -1,7 +1,14 @@
 #include "weight.h"
 #include "neuron.h"
 
+Weight::Weight() {
+}
+
 Weight::Weight(double lb, double ub) {
+  init(lb,ub);
+}
+
+void Weight::init(double lb, double ub) {
   delta = 0;
   fullDelta = 0;
   batch_size = 0;
@@ -12,12 +19,16 @@ Weight::Weight(double lb, double ub) {
   //generate weight in range to the hundred thousandths place
 }
 
+
 void Weight::connect(Neuron* p) {
   previous = p;
 }
 
 double Weight::process() {
   lastInput = previous->getValue();
+  if (isnan(lastInput*weight)) {
+    return 0;
+  }
   return lastInput*weight;
 }
 

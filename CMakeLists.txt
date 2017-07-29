@@ -8,10 +8,10 @@ file(GLOB SOURCES include/*.cpp include/*/*.cpp)
 
 # Include header files
 include_directories(include)
+find_package( OpenCV REQUIRED )
 
 # Create shared library
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
-
 # Install library
 install(TARGETS LightNet
   LIBRARY DESTINATION lib
