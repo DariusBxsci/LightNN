@@ -1,6 +1,6 @@
 #include "module.h"
 
-void Module::process(vector<double> input) {
+void Module::process(vector<double>& input) {
   for(unsigned int x = 0; x < neurons.size(); x++) {
     neurons[x]->process(input[x]);
   }
@@ -13,7 +13,7 @@ void Module::process() {
   //cout << " " << neurons.size() << endl;
 }
 
-void Module::backPropagate(vector<double> delta) {
+void Module::backPropagate(vector<double>& delta) {
   for(unsigned int x = 0; x < neurons.size(); x++) {
     neurons[x]->backPropagate(delta[x]);
   }

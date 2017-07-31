@@ -22,8 +22,15 @@ class StandardOptimizer : public Optimizer {
         return weightVal - (weightDelta*learningRate);
       }
       else {
-        if (weightDelta < -gradClip) return weightVal - (-gradClip*learningRate);
-        if (weightDelta > gradClip) return weightVal - (gradClip*learningRate);
+        //cout << "clipping" << endl;
+        if (weightDelta < -gradClip) {
+          //cout << "opt " << weightVal - (-gradClip*learningRate) << endl;
+          return weightVal - (-gradClip*learningRate);
+        };
+        if (weightDelta > gradClip) {
+          //cout << "opt " << weightVal - (gradClip*learningRate) << endl;
+          return weightVal - (gradClip*learningRate);
+        };
       }
     }
 

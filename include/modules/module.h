@@ -15,9 +15,9 @@ class Module {
 
     virtual void connect(Module* prev) =0;
 
-    void process(vector<double> input);
+    void process(vector<double> &input);
     void process();
-    void backPropagate(vector<double> delta);
+    void backPropagate(vector<double> &delta);
     void backPropagate();
     void gradientDescent(double learningRate, Optimizer*);
     void clearDelta();

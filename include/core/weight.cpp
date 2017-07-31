@@ -1,5 +1,7 @@
 #include "weight.h"
 #include "neuron.h"
+#include <unistd.h>
+
 
 Weight::Weight() {
 }
@@ -36,10 +38,18 @@ void Weight::backPropagate(double d) {
   delta = weight*d; //pass back
   //cout << lastInput << endl;
   fullDelta += d*lastInput;
+  if (isnan(fullDelta)) {
+    //cout << " with d " << d << endl;
+    //cout << "   and lastin " << lastInput << endl;
+    //usleep(10000000);
+    fullDelta = 0;
+  }
+  //cout << fullDelta << endl;
   batch_size++;
 }
 
 void Weight::gradientDescent(double learningRate, Optimizer* optimizer) {
+  //if (isnan(fullDelta)) usleep(10000000);
   //cout << fullDelta << endl;
   weight = optimizer->optimize(weight,fullDelta/batch_size,learningRate); //use full delta because of batch gradients
 }

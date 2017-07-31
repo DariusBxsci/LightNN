@@ -27,7 +27,7 @@ void Network::addClassifier(Classifier* c) {
   classifier = c;
 }
 
-vector<double> Network::process(vector<double> input) {
+vector<double> Network::process(vector<double>& input) {
   modules[0]->process(input);
   for (unsigned int x = 1; x < modules.size(); x++) {
     modules[x]->process();
@@ -43,12 +43,12 @@ void Network::printOutput() {
   }
 }
 
-double Network::getError(Example ex) {
+double Network::getError(Example& ex) {
   process(ex.input);
   return classifier->getError(logit,ex.output);
 }
 
-double Network::getError(TrainingSet ex) {
+double Network::getError(TrainingSet& ex) {
   double err = 0;
   for(unsigned int x = 0; x < ex.examples.size(); x++) {
     err += getError(ex.examples[x]);
@@ -56,13 +56,13 @@ double Network::getError(TrainingSet ex) {
   return err/ex.examples.size();
 }
 
-double Network::getClassError(Example ex) {
+double Network::getClassError(Example& ex) {
   process(ex.input);
   if (classify(output) == classify(ex.output)) return 0;
   else return 1;
 }
 
-double Network::getClassError(TrainingSet ex) {
+double Network::getClassError(TrainingSet& ex) {
   double err = 0;
   for(unsigned int x = 0; x < ex.examples.size(); x++) {
     err += getClassError(ex.examples[x]);
@@ -71,7 +71,7 @@ double Network::getClassError(TrainingSet ex) {
 }
 
 
-void Network::backPropagate(Example ex) {
+void Network::backPropagate(Example &ex) {
   process(ex.input);
   vector<double> delta = classifier->getDelta(logit,ex.output);
   modules[modules.size()-1]->backPropagate(delta);
@@ -86,7 +86,7 @@ void Network::gradientDescent(double learningRate, Optimizer* optimizer) {
   }
 }
 
-double Network::train(TrainingSet trainingset, Optimizer* optimizer, int iterations, int batch_size, double learningRate) {
+double Network::train(TrainingSet &trainingset, Optimizer* optimizer, int iterations, int batch_size, double learningRate) {
   std::clock_t start;
   start = std::clock();
   for (int i = 0; i < iterations; i++) {

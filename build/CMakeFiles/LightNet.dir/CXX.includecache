@@ -33,6 +33,8 @@ weight.h
 /home/axtyax/Projects/LightNet/include/core/weight.h
 neuron.h
 /home/axtyax/Projects/LightNet/include/core/neuron.h
+unistd.h
+-
 
 /home/axtyax/Projects/LightNet/include/core/weight.h
 cmath
@@ -98,6 +100,8 @@ network.h
 
 /home/axtyax/Projects/LightNet/include/network.h
 vector
+-
+ctime
 -
 modules/module.h
 /home/axtyax/Projects/LightNet/include/modules/module.h

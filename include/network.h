@@ -42,15 +42,15 @@ class Network {
     void addModule(Module*);
     void linkModules();
     void addClassifier(Classifier*);
-    vector<double> process(vector<double>);
+    vector<double> process(vector<double>&);
     void printOutput();
-    double getError(Example);
-    double getError(TrainingSet);
-    double getClassError(Example);
-    double getClassError(TrainingSet);
-    void backPropagate(Example);
+    double getError(Example&);
+    double getError(TrainingSet&);
+    double getClassError(Example&);
+    double getClassError(TrainingSet&);
+    void backPropagate(Example&);
     void gradientDescent(double learningRate, Optimizer*);
-    double train(TrainingSet, Optimizer*, int, int, double);
+    double train(TrainingSet&, Optimizer*, int, int, double);
     void clearDelta();
     ~Network();
 
