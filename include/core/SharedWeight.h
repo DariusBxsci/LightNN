@@ -7,12 +7,30 @@ class SharedWeight {
 
   private:
 
-    vector<Weight*> weights;
+    vector<Weight*> weights; //should all be the same
 
   public:
 
-    void addWeight(Weight*);
-    void cloneWeights();
+    void addWeight(Weight* w) {
+      weights.push_back(w);
+    }
+
+    void cloneWeights() { //make all weight vals and deltas the same
+        double cw = weights[0]->getWeight();
+        for(unsigned int x; x < weights.size(); x++) {
+          weights[x]->setWeight(cw);
+        }
+    }
+
+    void cloneWeightDeltas() { //make all weight vals and deltas the same
+        double sumDelt = 0;
+        for(unsigned int x; x < weights.size(); x++) {
+          sumDelt += weights[x]->getFullDelta() / weights[x]->getBatchSize();
+        }
+        for(unsigned int x; x < weights.size(); x++) {
+          weights[x]->setFullDelta(sumDelt);
+        }
+    }
 
 };
 

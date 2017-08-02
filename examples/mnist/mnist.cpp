@@ -15,6 +15,7 @@ int main() {
 
   double w = 1.0/(28*28);
   test_net.addModule(new FeedforwardModule(28*28));
+  //test_net.addModule(new FeedforwardModule(300,-w,w));
   test_net.addModule(new FeedforwardModule(10,-w,w));
   test_net.addModule(new BiasModule(10,0,w));
   test_net.addClassifier(new SoftmaxClassifier());
@@ -50,11 +51,12 @@ int main() {
 
   cout << "Dataset loaded successfully" << endl;
 
-  for (int x = 0; x < 1; x++) {
+  for (int x = 0; x < 4; x++) {
     test_net.process(testEx.input);
     test_net.printOutput();
-    for (int i = 0; i < 5000; i++) {
-      cout << "Finished epoch " << i << " out of 5000 (" << test_net.train(trainingSet, new StandardOptimizer(), 1, 100, 0.5) << "s)" << endl;
+    int it = 1000;
+    for (int i = 0; i < it; i++) {
+      cout << "Finished epoch " << i << " out of " << it << " (" << test_net.train(trainingSet, new StandardOptimizer(), 600, 1, 0.5) << "s)" << endl;
     }
     cout << "ERROR: " << test_net.getClassError(testingSet) << endl;
     cout << "ERROR: " << test_net.getError(testingSet) << endl;

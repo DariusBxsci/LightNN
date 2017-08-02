@@ -54,8 +54,28 @@ void Weight::gradientDescent(double learningRate, Optimizer* optimizer) {
   weight = optimizer->optimize(weight,fullDelta/batch_size,learningRate); //use full delta because of batch gradients
 }
 
+int Weight::getBatchSize() {
+  return batch_size;
+}
+
 double Weight::getDelta() {
   return delta;
+}
+
+double Weight::getFullDelta() {
+  return fullDelta;
+}
+
+void Weight::setFullDelta(double fd) {
+  fullDelta = fd;
+}
+
+double Weight::getWeight() {
+  return weight;
+}
+
+void Weight::setWeight(double w) {
+  weight = w;
 }
 
 void Weight::clearDelta() {

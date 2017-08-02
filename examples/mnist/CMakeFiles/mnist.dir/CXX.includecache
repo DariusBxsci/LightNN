@@ -34,6 +34,10 @@ math.h
 weight.h
 /usr/local/include/LightNet/core/weight.h
 
+/usr/local/include/LightNet/core/SharedWeight.h
+weight.h
+/usr/local/include/LightNet/core/weight.h
+
 /usr/local/include/LightNet/core/neuron.h
 weight.h
 /usr/local/include/LightNet/core/weight.h
@@ -91,6 +95,10 @@ module.h
 /usr/local/include/LightNet/core/BiasWeight.h
 
 /usr/local/include/LightNet/modules/ConvolutionModule.h
+module.h
+/usr/local/include/LightNet/modules/module.h
+../core/SharedWeight.h
+/usr/local/include/LightNet/core/SharedWeight.h
 
 /usr/local/include/LightNet/modules/FeedforwardModule.h
 module.h

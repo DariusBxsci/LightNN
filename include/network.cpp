@@ -45,7 +45,9 @@ void Network::printOutput() {
 
 double Network::getError(Example& ex) {
   process(ex.input);
-  return classifier->getError(logit,ex.output);
+  double err = classifier->getError(logit,ex.output);
+  if (isnan(err)) return 0;
+  return err;
 }
 
 double Network::getError(TrainingSet& ex) {

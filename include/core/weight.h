@@ -32,7 +32,12 @@ class Weight {
     virtual double process(); //process value from previous neuron
     virtual void backPropagate(double); //back propagate delta from next neuron
     virtual void gradientDescent(double, Optimizer*); //perform gradient descent on weight based on delta
+    int getBatchSize();
     double getDelta();
+    double getFullDelta();
+    void setFullDelta(double);
+    double getWeight();
+    void setWeight(double);
     void clearDelta(); //set delta to 0;
 
 };

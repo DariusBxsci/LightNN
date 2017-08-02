@@ -7,6 +7,7 @@ CMakeFiles/mnist.dir/mnist.o
  /usr/local/include/LightNet/classifiers/StandardClassifier.h
  /usr/local/include/LightNet/classifiers/classifier.h
  /usr/local/include/LightNet/core/BiasWeight.h
+ /usr/local/include/LightNet/core/SharedWeight.h
  /usr/local/include/LightNet/core/neuron.h
  /usr/local/include/LightNet/core/weight.h
  /usr/local/include/LightNet/data.h

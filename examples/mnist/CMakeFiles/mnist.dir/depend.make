@@ -6,6 +6,7 @@ CMakeFiles/mnist.dir/mnist.o: /usr/local/include/LightNet/classifiers/SoftmaxCla
 CMakeFiles/mnist.dir/mnist.o: /usr/local/include/LightNet/classifiers/StandardClassifier.h
 CMakeFiles/mnist.dir/mnist.o: /usr/local/include/LightNet/classifiers/classifier.h
 CMakeFiles/mnist.dir/mnist.o: /usr/local/include/LightNet/core/BiasWeight.h
+CMakeFiles/mnist.dir/mnist.o: /usr/local/include/LightNet/core/SharedWeight.h
 CMakeFiles/mnist.dir/mnist.o: /usr/local/include/LightNet/core/neuron.h
 CMakeFiles/mnist.dir/mnist.o: /usr/local/include/LightNet/core/weight.h
 CMakeFiles/mnist.dir/mnist.o: /usr/local/include/LightNet/data.h
