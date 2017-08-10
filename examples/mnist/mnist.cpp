@@ -22,9 +22,9 @@ int main() {
   test_net.addModule(new FeedforwardModule(10,0,w/4));*/
 
   test_net.addModule(new FeedforwardModule(28*28));
-  test_net.addModule(new ConvolutionModule(1,10, 3,3, 28, 28, 0,kw/2));
-  test_net.addModule(new SubsampleModule(10,28,28));
-  test_net.addModule(new BiasModule(10*14*14,0,0));
+  test_net.addModule(new ConvolutionModule(1,5, 3,3, 28, 28, 0,kw/2));
+  test_net.addModule(new SubsampleModule(5,28,28));
+  test_net.addModule(new BiasModule(5*14*14,0,0));
   test_net.addModule(new FunctionModule(new ReluFunction()));
   test_net.addModule(new FeedforwardModule(10,0,w/2));
 

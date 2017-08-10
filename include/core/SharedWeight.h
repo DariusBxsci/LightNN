@@ -43,7 +43,7 @@ class SharedWeight {
         }
     }
 
-    void gradientDescent(double learningRate, Optimizer* optimizer) {
+    void gradientDescent(double learningRate) {
       //cloneWeightDeltas();
       //cout << "size " << weights.size() << endl;
       for (unsigned int x = 0; x < weights.size(); x++) {

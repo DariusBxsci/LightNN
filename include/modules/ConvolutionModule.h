@@ -18,7 +18,7 @@ class Kernel {
     Kernel(int sizex, int sizey);
     void connect(FeatureMap*& input, FeatureMap*& output);
     void cloneWeightDeltas();
-    void gradientDescent(double learningRate, Optimizer* optimizer);
+    void gradientDescent(double learningRate);
 
 };
 
@@ -37,7 +37,7 @@ class ConvolutionModule : public Module {
 
     ConvolutionModule(int, int, int, int, int, int, double, double);
     void connect(Module* prev);
-    void gradientDescent(double learningRate, Optimizer* optimizer);
+    void gradientDescent(double learningRate);
     void backPropagate(vector<double>& delta);
     void backPropagate();
     ~ConvolutionModule();

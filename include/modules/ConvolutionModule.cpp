@@ -32,10 +32,10 @@ void Kernel::cloneWeightDeltas() {
   }
 }
 
-void Kernel::gradientDescent(double learningRate, Optimizer* optimizer) {
+void Kernel::gradientDescent(double learningRate) {
   for(int kx = 0; kx < units.size(); kx++) {
     for(int ky = 0; ky < units[0].size(); ky++) {
-      units[kx][ky].gradientDescent(learningRate,optimizer);
+      units[kx][ky].gradientDescent(learningRate);
     }
   }
 }
@@ -89,10 +89,10 @@ void ConvolutionModule::connect(Module* prev) {
   }
 }
 
-void ConvolutionModule::gradientDescent(double learningRate, Optimizer* optimizer) {
-  /*for(unsigned int x = 0; x < kernels.size(); x++) {
-    kernels[x]->gradientDescent(learningRate,optimizer);
-  }*/
+void ConvolutionModule::gradientDescent(double learningRate) {
+  for(unsigned int x = 0; x < kernels.size(); x++) {
+    kernels[x]->gradientDescent(learningRate);
+  }
 }
 
 void ConvolutionModule::backPropagate(vector<double>& delta) {
