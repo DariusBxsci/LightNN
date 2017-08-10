@@ -33,7 +33,6 @@ class SharedWeight {
         double sumDelt = 0;
         //cout << "SIZE " << weights.size() << endl;
         for(unsigned int x = 0; x < weights.size(); x++) {
-          //cout << weights[x]->getFullDelta() << endl;
           sumDelt += weights[x]->getFullDelta();
         }
         //cout << sumDelt << endl;
@@ -44,7 +43,7 @@ class SharedWeight {
     }
 
     void gradientDescent(double learningRate) {
-      //cloneWeightDeltas();
+      cloneWeightDeltas();
       //cout << "size " << weights.size() << endl;
       for (unsigned int x = 0; x < weights.size(); x++) {
         //cout << "weight " << x << ": " << weights[x]->getWeight() << endl;

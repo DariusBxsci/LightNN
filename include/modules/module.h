@@ -25,6 +25,8 @@ class Module {
     vector<Neuron*>& getNeurons();
     vector<double> getValue();
     int getSize();
+    vector<double> getWeightVector();
+    void load(vector<double>);
     ~Module();
 
 };

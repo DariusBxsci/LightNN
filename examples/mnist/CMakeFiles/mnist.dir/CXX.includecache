@@ -127,6 +127,12 @@ vector
 -
 ctime
 -
+fstream
+-
+typeinfo
+-
+sstream
+-
 modules/module.h
 /usr/local/include/LightNet/modules/module.h
 classifiers/classifier.h

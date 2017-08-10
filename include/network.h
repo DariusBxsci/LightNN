@@ -3,6 +3,9 @@
 
 #include <vector>
 #include <ctime>
+#include <fstream>
+#include <typeinfo>
+#include <sstream>
 #include "modules/module.h"
 #include "classifiers/classifier.h"
 namespace ln {
@@ -55,6 +58,7 @@ class Network {
     double train(TrainingSet&, int, int, double);
     void clearDelta();
     void save(string directory);
+    void load(string directory);
     ~Network();
 
 };

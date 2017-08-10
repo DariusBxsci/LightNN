@@ -90,6 +90,24 @@ double Neuron::getDelta() {
   return delta;
 }
 
+int Neuron::getNumWeights() {
+  return weights.size();
+}
+
+vector<double> Neuron::getWeightVector() {
+  vector<double> wv;
+  for(unsigned int x = 0; x < weights.size(); x++) {
+    wv.push_back(weights[x]->getWeight());
+  }
+  return wv;
+}
+
+void Neuron::load(vector<double> wv) {
+  for(unsigned int x = 0; x < wv.size(); x++) {
+    weights[x]->setWeight(wv[x]);
+  }
+}
+
 Neuron::~Neuron() {
   for (auto it = weights.begin(); it != weights.end(); ++it){
       delete *it;

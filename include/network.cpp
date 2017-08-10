@@ -126,6 +126,42 @@ void Network::clearDelta() {
   }
 }
 
+void Network::save(string directory) {
+  for(unsigned int x = 0; x < modules.size(); x++) {
+    string filename = directory+"/"+"module_" + to_string(x);
+    vector<double> wv = modules[x]->getWeightVector();
+    string ws = "";
+    for(unsigned int s = 0; s < wv.size(); s++) {
+      ws += to_string(wv[s]) + ",";
+    }
+    ofstream file;
+    file.open(filename);
+    file << ws;
+  }
+}
+
+void Network::load(string directory) {
+  for(unsigned int x = 0; x < modules.size(); x++) {
+    string filename = directory+"/"+"module_" + to_string(x);
+    ifstream file(filename);
+    stringstream buffer;
+    buffer << file.rdbuf();
+    string weightString = buffer.str();
+    vector<double> wv;
+    string buf = "";
+    for(unsigned int s = 0; s < weightString.length(); s++) {
+      if (weightString.at(s) == ',') {
+        wv.push_back(atof(buf.c_str()));
+        buf = "";
+      }
+      else {
+        buf += weightString.at(s);
+      }
+    }
+    modules[x]->load(wv);
+  }
+}
+
 Network::~Network() {
   for (auto it = modules.begin(); it != modules.end(); ++it){
       delete *it;

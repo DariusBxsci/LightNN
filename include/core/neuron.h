@@ -33,6 +33,9 @@ class Neuron {
     void clearDelta();
     double getValue();
     double getDelta();
+    int getNumWeights();
+    vector<double> getWeightVector();
+    void load(vector<double>);
     ~Neuron();
 
 };

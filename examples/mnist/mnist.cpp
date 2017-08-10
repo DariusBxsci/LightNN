@@ -10,23 +10,11 @@ int main() {
 
   ln::Network test_net;
 
-  /*test_net.addModule(new FeedforwardModule(28*28));
-  test_net.addModule(new ConvolutionModule(1,32, 3,3, 28, 28, 0,kw/2));
-  test_net.addModule(new SubsampleModule(32,28,28));
-  test_net.addModule(new BiasModule(32*14*14,0,0));
-  test_net.addModule(new FunctionModule(new ReluFunction()));
-  test_net.addModule(new ConvolutionModule(32,2, 3,3, 14, 14, 0,kw/2));
-  test_net.addModule(new SubsampleModule(64,14,14));
-  test_net.addModule(new BiasModule(64*7*7,0,0));
-  test_net.addModule(new FunctionModule(new ReluFunction()));
-  test_net.addModule(new FeedforwardModule(10,0,w/4));*/
-
   test_net.addModule(new FeedforwardModule(28*28));
-  test_net.addModule(new ConvolutionModule(1,5, 3,3, 28, 28, 0,kw/2));
-  test_net.addModule(new SubsampleModule(5,28,28));
-  test_net.addModule(new BiasModule(5*14*14,0,0));
+  test_net.addModule(new ConvolutionModule(1,32, 3,3, 28, 28, 0,kw/2));
+  test_net.addModule(new BiasModule(32*28*28,0,0));
   test_net.addModule(new FunctionModule(new ReluFunction()));
-  test_net.addModule(new FeedforwardModule(10,0,w/2));
+  test_net.addModule(new FeedforwardModule(10,0,w/8));
 
   test_net.addClassifier(new SoftmaxClassifier());
 
@@ -61,23 +49,30 @@ int main() {
 
   cout << "Dataset loaded successfully" << endl;
 
+  test_net.load("./models/test_model");
+
   test_net.setOptimizer(new StandardOptimizer());
 
-  cout << "ESTIMATED TIME TO TRAIN " << test_net.train(trainingSet, 1, 100, 0)*100 << " seconds." << endl;
+  cout << "ESTIMATED TIME TO TRAIN " << test_net.train(trainingSet, 1, 10, 0)*1000 << " seconds." << endl;
 
+  double cerr = 1;
   test_net.process(testEx.input);
   test_net.printOutput();
-  for (int x = 0; x < 50; x++) {
+  for (int x = 0; cerr > 0.02; x++) {
+
     int it = 6;
     for (int i = 0; i < it; i++) {
-      cout << "Finished epoch " << i << " out of " << it << " (" << test_net.train(trainingSet, 100, 100, 0.5) << "s)" << endl;
+      cout << "Finished epoch " << i << " out of " << it << " (" << test_net.train(trainingSet, 1000, 10, 0.3) << "s)" << endl;
     }
 
     test_net.process(testEx.input);
     test_net.printOutput();
 
-    cout << "ERROR: " << test_net.getClassError(testingSet) << endl;
+    cerr = test_net.getClassError(testingSet);
+    cout << "ERROR: " << cerr << endl;
     cout << "ERROR: " << test_net.getError(testingSet) << endl;
+
+    test_net.save("./models/test_model");
   }
 
   //test_net.process(testEx.input);

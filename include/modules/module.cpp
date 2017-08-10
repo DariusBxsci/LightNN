@@ -59,6 +59,24 @@ int Module::getSize() {
   return neurons.size();
 }
 
+vector<double> Module::getWeightVector() {
+  vector<double> wv;
+  for(unsigned int x = 0; x < neurons.size(); x++) {
+    vector<double> v = neurons[x]->getWeightVector();
+    wv.insert(wv.end(), v.begin(), v.end());
+  }
+  return wv;
+}
+
+void Module::load(vector<double> wv) {
+  int b = 0;
+  for(unsigned int x = 0; x < neurons.size(); x++) {
+    vector<double> vals(wv.begin() + b,wv.begin() + b+neurons[x]->getNumWeights());
+    neurons[x]->load(vals);
+    b += neurons[x]->getNumWeights();
+  }
+}
+
 Module::~Module() {
   for (auto it = neurons.begin(); it != neurons.end(); ++it){
       delete *it;

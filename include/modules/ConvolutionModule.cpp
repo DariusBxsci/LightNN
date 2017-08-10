@@ -99,18 +99,18 @@ void ConvolutionModule::backPropagate(vector<double>& delta) {
   for(unsigned int x = 0; x < neurons.size(); x++) {
     neurons[x]->backPropagate(delta[x]);
   }
-  for(unsigned int x = 0; x < kernels.size(); x++) {
+  /*for(unsigned int x = 0; x < kernels.size(); x++) {
     kernels[x]->cloneWeightDeltas();
-  }
+  }*/
 }
 
 void ConvolutionModule::backPropagate() {
   for(unsigned int x = 0; x < neurons.size(); x++) {
     neurons[x]->backPropagate();
   }
-  for(unsigned int x = 0; x < kernels.size(); x++) {
+  /*for(unsigned int x = 0; x < kernels.size(); x++) {
     kernels[x]->cloneWeightDeltas();
-  }
+  }*/
 }
 
 ConvolutionModule::~ConvolutionModule() {
