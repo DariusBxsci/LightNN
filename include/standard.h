@@ -6,6 +6,7 @@
 #include "modules/FunctionModule.h"
 #include "modules/BiasModule.h"
 #include "modules/ConvolutionModule.h"
+#include "modules/SubsampleModule.h"
 #include "classifiers/StandardClassifier.h"
 #include "classifiers/SoftmaxClassifier.h"
 #include "optimizers/StandardOptimizer.h"

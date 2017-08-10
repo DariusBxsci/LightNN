@@ -27,9 +27,20 @@ void Network::addClassifier(Classifier* c) {
   classifier = c;
 }
 
+vector<double> Network::q_process(vector<double> input) {
+  modules[0]->process(input);
+  for (unsigned int x = 1; x < modules.size(); x++) {
+    modules[x]->process();
+  }
+  logit = modules[modules.size()-1]->getValue();
+  output = classifier->classify(logit);
+  return output;
+}
+
 vector<double> Network::process(vector<double>& input) {
   modules[0]->process(input);
   for (unsigned int x = 1; x < modules.size(); x++) {
+    //cout << "mod " << x << endl;
     modules[x]->process();
   }
   logit = modules[modules.size()-1]->getValue();
@@ -60,6 +71,7 @@ double Network::getError(TrainingSet& ex) {
 
 double Network::getClassError(Example& ex) {
   process(ex.input);
+  //cout << "out " << classify(output) << " class " << classify(ex.output) << endl;
   if (classify(output) == classify(ex.output)) return 0;
   else return 1;
 }
@@ -72,6 +84,11 @@ double Network::getClassError(TrainingSet& ex) {
   return err/ex.examples.size();
 }
 
+void Network::setOptimizer(Optimizer *o) {
+  for(unsigned int x = 0; x < modules.size(); x++) {
+    modules[x]->setOptimizer(o);
+  }
+}
 
 void Network::backPropagate(Example &ex) {
   process(ex.input);
@@ -82,20 +99,22 @@ void Network::backPropagate(Example &ex) {
   }
 }
 
-void Network::gradientDescent(double learningRate, Optimizer* optimizer) {
+void Network::gradientDescent(double learningRate) {
   for (unsigned int x = 0; x < modules.size(); x++) {
-    modules[x]->gradientDescent(learningRate, optimizer);
+    modules[x]->gradientDescent(learningRate);
   }
 }
 
-double Network::train(TrainingSet &trainingset, Optimizer* optimizer, int iterations, int batch_size, double learningRate) {
+double Network::train(TrainingSet &trainingset, int iterations, int batch_size, double learningRate) {
   std::clock_t start;
   start = std::clock();
   for (int i = 0; i < iterations; i++) {
     for(int b = 0; b < batch_size; b++) {
-      backPropagate(trainingset.examples[rand()%trainingset.examples.size()]);
+      int ex = rand()%trainingset.examples.size();
+      //cout << "ex " << i << endl;
+      backPropagate(trainingset.examples[ex]);
     }
-    gradientDescent(learningRate,optimizer);
+    gradientDescent(learningRate);
     clearDelta();
   }
   return ( std::clock() - start ) / (double) CLOCKS_PER_SEC;

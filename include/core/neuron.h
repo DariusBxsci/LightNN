@@ -11,6 +11,7 @@ class Neuron {
     vector<Weight*> weights;
     vector<Weight*> nextWeights;
     double value;
+    double input;
     double delta;
     double bias;
     double upperWeightLimit, lowerWeightLimit;
@@ -27,7 +28,8 @@ class Neuron {
     void process(double);
     void backPropagate();
     void backPropagate(double);
-    void gradientDescent(double, Optimizer*);
+    void setOptimizer(Optimizer*);
+    void gradientDescent(double);
     void clearDelta();
     double getValue();
     double getDelta();

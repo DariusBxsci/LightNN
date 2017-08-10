@@ -2,6 +2,7 @@
 #define LIGHTNET_SHARED_WEIGH_H
 
 #include "weight.h"
+#include "neuron.h"
 
 class SharedWeight {
 
@@ -15,21 +16,40 @@ class SharedWeight {
       weights.push_back(w);
     }
 
-    void cloneWeights() { //make all weight vals and deltas the same
+    void connect(Neuron*& input, Neuron*& output, Weight* w) {
+      addWeight(w);
+      output->connect(input, w);
+      cloneWeights();
+    }
+
+    void cloneWeights() { //make all weight vals the same
         double cw = weights[0]->getWeight();
-        for(unsigned int x; x < weights.size(); x++) {
+        for(unsigned int x = 0; x < weights.size(); x++) {
           weights[x]->setWeight(cw);
         }
     }
 
-    void cloneWeightDeltas() { //make all weight vals and deltas the same
+    void cloneWeightDeltas() { //make all deltas the same
         double sumDelt = 0;
-        for(unsigned int x; x < weights.size(); x++) {
-          sumDelt += weights[x]->getFullDelta() / weights[x]->getBatchSize();
+        //cout << "SIZE " << weights.size() << endl;
+        for(unsigned int x = 0; x < weights.size(); x++) {
+          //cout << weights[x]->getFullDelta() << endl;
+          sumDelt += weights[x]->getFullDelta();
         }
-        for(unsigned int x; x < weights.size(); x++) {
-          weights[x]->setFullDelta(sumDelt);
+        //cout << sumDelt << endl;
+        for(unsigned int x = 0; x < weights.size(); x++) {
+          weights[x]->setFullDelta(sumDelt/weights.size());
+          //cout << "w " << weights[x]->getFullDelta() << endl;
         }
+    }
+
+    void gradientDescent(double learningRate, Optimizer* optimizer) {
+      //cloneWeightDeltas();
+      //cout << "size " << weights.size() << endl;
+      for (unsigned int x = 0; x < weights.size(); x++) {
+        //cout << "weight " << x << ": " << weights[x]->getWeight() << endl;
+        weights[x]->gradientDescent(learningRate);
+      }
     }
 
 };

@@ -22,6 +22,7 @@ class Weight {
     double fullDelta; //stores sum of many deltas (for batch gradientDescent)
     int batch_size;
     double lastInput;
+    Optimizer* optimizer;
 
   public:
 
@@ -31,7 +32,8 @@ class Weight {
     virtual void connect(Neuron*);
     virtual double process(); //process value from previous neuron
     virtual void backPropagate(double); //back propagate delta from next neuron
-    virtual void gradientDescent(double, Optimizer*); //perform gradient descent on weight based on delta
+    virtual void gradientDescent(double); //perform gradient descent on weight based on delta
+    void setOptimizer(Optimizer*);
     int getBatchSize();
     double getDelta();
     double getFullDelta();

@@ -15,8 +15,7 @@ Neuron::Neuron(Function* function) {
   upperWeightLimit = 1;
 }
 
-void Neuron::connect(Neuron* prev, Weight *weight) {
-  Weight *w = weight;
+void Neuron::connect(Neuron* prev, Weight *w) {
   w->init(lowerWeightLimit, upperWeightLimit);
   w->connect(prev);
   prev->forwardConnect(w);
@@ -30,14 +29,17 @@ void Neuron::forwardConnect(Weight* nextWeight) {
 void Neuron::process() {
   value = 0;
   for (unsigned int x = 0; x < weights.size(); x++) {
+    //cout << x << ": " << weights[x]->process() << endl;
     value += weights[x]->process();
   }
+  this->input = value;
   if (isfunction == true) value = function->process(value);
-  //cout << value << endl;
+  //cout << "     " << value << endl;
 }
 
 void Neuron::process(double input) {
   value = input;
+  this->input = input;
   if (isfunction == true) value = function->process(value);
 }
 
@@ -46,6 +48,7 @@ void Neuron::backPropagate() {
   for (unsigned int x = 0; x < nextWeights.size(); x++) {
     delta += nextWeights[x]->getDelta();
   }
+  if(isfunction == true) delta = delta * function->derive(input);
   for (unsigned int x = 0; x < weights.size(); x++) {
     weights[x]->backPropagate(delta);
   }
@@ -53,15 +56,22 @@ void Neuron::backPropagate() {
 
 void Neuron::backPropagate(double inDelta) {
   delta = inDelta;
+  if(isfunction == true) delta = delta * function->derive(input);
   for (unsigned int x = 0; x < weights.size(); x++) {
     weights[x]->backPropagate(delta);
   }
 }
 
-void Neuron::gradientDescent(double learningRate, Optimizer* optimizer) {
+void Neuron::setOptimizer(Optimizer* o) {
+  for (unsigned int x = 0; x < weights.size(); x++) {
+    weights[x]->setOptimizer(o);
+  }
+}
+
+void Neuron::gradientDescent(double learningRate) {
   if (isfunction == false) {
     for (unsigned int x = 0; x < weights.size(); x++) {
-      weights[x]->gradientDescent(learningRate,optimizer);
+      weights[x]->gradientDescent(learningRate);
     }
   }
 }

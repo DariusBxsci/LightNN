@@ -21,13 +21,13 @@ void Weight::init(double lb, double ub) {
   //generate weight in range to the hundred thousandths place
 }
 
-
 void Weight::connect(Neuron* p) {
   previous = p;
 }
 
 double Weight::process() {
   lastInput = previous->getValue();
+  //cout << "Input: " << lastInput << "  Out: " << weight*lastInput << " from weight " << weight << endl;
   if (isnan(lastInput*weight)) {
     return 0;
   }
@@ -38,20 +38,24 @@ void Weight::backPropagate(double d) {
   delta = weight*d; //pass back
   //cout << lastInput << endl;
   fullDelta += d*lastInput;
-  if (isnan(fullDelta)) {
-    //cout << " with d " << d << endl;
-    //cout << "   and lastin " << lastInput << endl;
-    //usleep(10000000);
-    fullDelta = 0;
-  }
-  //cout << fullDelta << endl;
+  /*if (fullDelta > 5) {
+    cout << " with d " << d << endl;
+    cout << "   and lastin " << lastInput << endl;
+    usleep(10000000);
+    //fullDelta = 0;
+  }*/
+  //if(weight == 1) cout << "delta " << fullDelta << endl;
   batch_size++;
 }
 
-void Weight::gradientDescent(double learningRate, Optimizer* optimizer) {
+void Weight::gradientDescent(double learningRate) {
   //if (isnan(fullDelta)) usleep(10000000);
-  //cout << fullDelta << endl;
+  //cout << fullDelta/batch_size << endl;
   weight = optimizer->optimize(weight,fullDelta/batch_size,learningRate); //use full delta because of batch gradients
+}
+
+void Weight::setOptimizer(Optimizer* o) {
+  optimizer = o;
 }
 
 int Weight::getBatchSize() {

@@ -40,7 +40,7 @@ class BiasWeight : public Weight {
       batch_size++;
     }
 
-    void gradientDescent(double learningRate, Optimizer* optimizer) {
+    void gradientDescent(double learningRate) {
       bias = optimizer->optimize(bias,fullDelta/batch_size,learningRate);
     }
 

@@ -10,6 +10,7 @@ BiasModule::BiasModule(int size, double lb, double ub) {
 }
 
 void BiasModule::connect(Module* prev) {
+  //cout << "size " << prev->getNeurons().size() << endl;
   for(unsigned int x = 0; x < prev->getNeurons().size(); x++) {
     neurons[x]->connect(prev->getNeurons()[x], new BiasWeight());
   }

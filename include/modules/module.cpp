@@ -25,9 +25,15 @@ void Module::backPropagate() {
   }
 }
 
-void Module::gradientDescent(double learningRate, Optimizer* optimizer) {
+void Module::gradientDescent(double learningRate) {
   for(unsigned int x = 0; x < neurons.size(); x++) {
-    neurons[x]->gradientDescent(learningRate,optimizer);
+    neurons[x]->gradientDescent(learningRate);
+  }
+}
+
+void Module::setOptimizer(Optimizer* o) {
+  for(unsigned int x = 0; x < neurons.size(); x++) {
+    neurons[x]->setOptimizer(o);
   }
 }
 

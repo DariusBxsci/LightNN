@@ -14,12 +14,13 @@ class Module {
   public:
 
     virtual void connect(Module* prev) =0;
+    virtual void gradientDescent(double learningRate);
+    virtual void backPropagate(vector<double> &delta);
+    virtual void backPropagate();
 
     void process(vector<double> &input);
     void process();
-    void backPropagate(vector<double> &delta);
-    void backPropagate();
-    void gradientDescent(double learningRate, Optimizer*);
+    void setOptimizer(Optimizer*);
     void clearDelta();
     vector<Neuron*>& getNeurons();
     vector<double> getValue();

@@ -18,6 +18,7 @@ CMakeFiles/mnist.dir/mnist.o: /usr/local/include/LightNet/modules/BiasModule.h
 CMakeFiles/mnist.dir/mnist.o: /usr/local/include/LightNet/modules/ConvolutionModule.h
 CMakeFiles/mnist.dir/mnist.o: /usr/local/include/LightNet/modules/FeedforwardModule.h
 CMakeFiles/mnist.dir/mnist.o: /usr/local/include/LightNet/modules/FunctionModule.h
+CMakeFiles/mnist.dir/mnist.o: /usr/local/include/LightNet/modules/SubsampleModule.h
 CMakeFiles/mnist.dir/mnist.o: /usr/local/include/LightNet/modules/module.h
 CMakeFiles/mnist.dir/mnist.o: /usr/local/include/LightNet/network.h
 CMakeFiles/mnist.dir/mnist.o: /usr/local/include/LightNet/optimizers/StandardOptimizer.h

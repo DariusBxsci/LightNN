@@ -18,6 +18,12 @@ weight.h
 
 /home/axtyax/Projects/LightNet/include/core/SharedWeight.cpp
 
+/home/axtyax/Projects/LightNet/include/core/SharedWeight.h
+weight.h
+/home/axtyax/Projects/LightNet/include/core/weight.h
+neuron.h
+/home/axtyax/Projects/LightNet/include/core/neuron.h
+
 /home/axtyax/Projects/LightNet/include/core/neuron.cpp
 neuron.h
 /home/axtyax/Projects/LightNet/include/core/neuron.h
@@ -65,6 +71,14 @@ module.h
 /home/axtyax/Projects/LightNet/include/core/BiasWeight.h
 
 /home/axtyax/Projects/LightNet/include/modules/ConvolutionModule.cpp
+ConvolutionModule.h
+/home/axtyax/Projects/LightNet/include/modules/ConvolutionModule.h
+
+/home/axtyax/Projects/LightNet/include/modules/ConvolutionModule.h
+module.h
+/home/axtyax/Projects/LightNet/include/modules/module.h
+../core/SharedWeight.h
+/home/axtyax/Projects/LightNet/include/core/SharedWeight.h
 
 /home/axtyax/Projects/LightNet/include/modules/FeedforwardModule.cpp
 FeedforwardModule.h

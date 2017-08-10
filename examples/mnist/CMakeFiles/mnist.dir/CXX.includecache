@@ -37,6 +37,8 @@ weight.h
 /usr/local/include/LightNet/core/SharedWeight.h
 weight.h
 /usr/local/include/LightNet/core/weight.h
+neuron.h
+/usr/local/include/LightNet/core/neuron.h
 
 /usr/local/include/LightNet/core/neuron.h
 weight.h
@@ -110,6 +112,10 @@ module.h
 ../functions/function.h
 /usr/local/include/LightNet/functions/function.h
 
+/usr/local/include/LightNet/modules/SubsampleModule.h
+module.h
+/usr/local/include/LightNet/modules/module.h
+
 /usr/local/include/LightNet/modules/module.h
 vector
 -
@@ -143,6 +149,8 @@ modules/BiasModule.h
 /usr/local/include/LightNet/modules/BiasModule.h
 modules/ConvolutionModule.h
 /usr/local/include/LightNet/modules/ConvolutionModule.h
+modules/SubsampleModule.h
+/usr/local/include/LightNet/modules/SubsampleModule.h
 classifiers/StandardClassifier.h
 /usr/local/include/LightNet/classifiers/StandardClassifier.h
 classifiers/SoftmaxClassifier.h

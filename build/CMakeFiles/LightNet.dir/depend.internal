@@ -25,7 +25,14 @@ CMakeFiles/LightNet.dir/include/modules/BiasModule.o
  /home/axtyax/Projects/LightNet/include/modules/module.h
  /home/axtyax/Projects/LightNet/include/optimizers/optimizer.h
 CMakeFiles/LightNet.dir/include/modules/ConvolutionModule.o
+ /home/axtyax/Projects/LightNet/include/core/SharedWeight.h
+ /home/axtyax/Projects/LightNet/include/core/neuron.h
+ /home/axtyax/Projects/LightNet/include/core/weight.h
+ /home/axtyax/Projects/LightNet/include/functions/function.h
  /home/axtyax/Projects/LightNet/include/modules/ConvolutionModule.cpp
+ /home/axtyax/Projects/LightNet/include/modules/ConvolutionModule.h
+ /home/axtyax/Projects/LightNet/include/modules/module.h
+ /home/axtyax/Projects/LightNet/include/optimizers/optimizer.h
 CMakeFiles/LightNet.dir/include/modules/FeedforwardModule.o
  /home/axtyax/Projects/LightNet/include/core/neuron.h
  /home/axtyax/Projects/LightNet/include/core/weight.h

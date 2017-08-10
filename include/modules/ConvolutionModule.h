@@ -5,6 +5,8 @@
 #include "../core/SharedWeight.h"
 using namespace std;
 
+using FeatureMap = vector<vector<Neuron*>>;
+
 class Kernel {
 
   private:
@@ -13,7 +15,9 @@ class Kernel {
 
   public:
 
-    void connect(vector<Neuron*> input, vector<Neuron*> output, double upperWeightLimit, double lowerWeightLimit);
+    Kernel(int sizex, int sizey);
+    void connect(FeatureMap*& input, FeatureMap*& output);
+    void cloneWeightDeltas();
     void gradientDescent(double learningRate, Optimizer* optimizer);
 
 };
@@ -24,11 +28,19 @@ class ConvolutionModule : public Module {
 
     int inputSize;
     double lowerWeightLimit,upperWeightLimit;
+    int kernelsPerFeatureMap, sizex, sizey, featureSize,
+     numFeatures, ksizex, ksizey;
+    vector<Kernel*> kernels;
+    vector<FeatureMap*> featureMaps;
 
   public:
 
-    ConvolutionModule(int images, int sizex, int sizey, double,double);
+    ConvolutionModule(int, int, int, int, int, int, double, double);
     void connect(Module* prev);
+    void gradientDescent(double learningRate, Optimizer* optimizer);
+    void backPropagate(vector<double>& delta);
+    void backPropagate();
+    ~ConvolutionModule();
 
 };
 

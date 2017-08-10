@@ -7,7 +7,7 @@ class Optimizer {
 
   public:
 
-    virtual double optimize(double weightVal, double weightDelta, double learningRate) =0;
+    virtual double optimize(double weightVal, double weightDelta, double learningRate) {}
 
 };
 

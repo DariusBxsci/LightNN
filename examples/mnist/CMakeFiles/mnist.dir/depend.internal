@@ -19,6 +19,7 @@ CMakeFiles/mnist.dir/mnist.o
  /usr/local/include/LightNet/modules/ConvolutionModule.h
  /usr/local/include/LightNet/modules/FeedforwardModule.h
  /usr/local/include/LightNet/modules/FunctionModule.h
+ /usr/local/include/LightNet/modules/SubsampleModule.h
  /usr/local/include/LightNet/modules/module.h
  /usr/local/include/LightNet/network.h
  /usr/local/include/LightNet/optimizers/StandardOptimizer.h

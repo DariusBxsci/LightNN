@@ -20,6 +20,7 @@ FeedforwardModule::FeedforwardModule(int size) {
 
 void FeedforwardModule::connect(Module* prev) {
   for(unsigned int x = 0; x < neurons.size(); x++) {
+    //cout << "prev " << prev->getNeurons().size() << endl;
     for(unsigned int y = 0; y < prev->getNeurons().size(); y++) {
       neurons[x]->connect(prev->getNeurons()[y], new Weight());
     }

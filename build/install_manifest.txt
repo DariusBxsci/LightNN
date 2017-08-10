@@ -9,6 +9,7 @@
 /usr/local/include/LightNet/core/SharedWeight.cpp
 /usr/local/include/LightNet/core/neuron.h
 /usr/local/include/LightNet/modules/FeedforwardModule.h
+/usr/local/include/LightNet/modules/SubsampleModule.h
 /usr/local/include/LightNet/modules/BiasModule.h
 /usr/local/include/LightNet/modules/ConvolutionModule.cpp
 /usr/local/include/LightNet/modules/FeedforwardModule.cpp
