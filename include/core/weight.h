@@ -38,8 +38,9 @@ class Weight {
     double getDelta();
     double getFullDelta();
     void setFullDelta(double);
-    double getWeight();
-    void setWeight(double);
+    void setDelta(double);
+    virtual double getWeight();
+    virtual void setWeight(double);
     void clearDelta(); //set delta to 0;
 
 };

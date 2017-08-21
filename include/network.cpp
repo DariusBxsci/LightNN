@@ -48,6 +48,10 @@ vector<double> Network::process(vector<double>& input) {
   return output;
 }
 
+int Network::getClass() {
+  return classify(output);
+}
+
 void Network::printOutput() {
   for (unsigned int x = 0; x < output.size(); x++) {
     cout << "OUTPUT NEURON " << x << ": " << output[x] << endl;
@@ -132,7 +136,9 @@ void Network::save(string directory) {
     vector<double> wv = modules[x]->getWeightVector();
     string ws = "";
     for(unsigned int s = 0; s < wv.size(); s++) {
-      ws += to_string(wv[s]) + ",";
+      std::stringstream ss;
+      ss << fixed << setprecision( 16 ) << wv[s];
+      ws += ss.str() + ",";
     }
     ofstream file;
     file.open(filename);
@@ -151,7 +157,7 @@ void Network::load(string directory) {
     string buf = "";
     for(unsigned int s = 0; s < weightString.length(); s++) {
       if (weightString.at(s) == ',') {
-        wv.push_back(atof(buf.c_str()));
+        wv.push_back(stod(buf));
         buf = "";
       }
       else {

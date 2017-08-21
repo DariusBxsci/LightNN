@@ -16,7 +16,10 @@ namespace ln {
       for (int x = 0; x < sx; x++) {
           for (int y = 0; y < sy; y++) {
               //cout << (double)img.at<uchar>(x,y) << endl;
-              image.push_back((double)img.at<uchar>(x,y)/255.0);
+              double v = (double)img.at<uchar>(x,y)/255.0;
+              /*if(v > 0.75) v = 1;
+              else v = 0;*/
+              image.push_back(v);
           }
       }
       return image;

@@ -13,6 +13,8 @@ LightNet/standard.h
 -
 LightNet/data.h
 -
+SFML/Graphics.hpp
+-
 
 /usr/local/include/LightNet/classifiers/SoftmaxClassifier.h
 classifier.h
@@ -130,6 +132,8 @@ ctime
 fstream
 -
 typeinfo
+-
+iomanip
 -
 sstream
 -

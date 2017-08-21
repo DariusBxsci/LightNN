@@ -5,6 +5,7 @@
 #include <ctime>
 #include <fstream>
 #include <typeinfo>
+#include <iomanip>
 #include <sstream>
 #include "modules/module.h"
 #include "classifiers/classifier.h"
@@ -47,6 +48,7 @@ class Network {
     void addClassifier(Classifier*);
     vector<double> process(vector<double>&);
     vector<double> q_process(vector<double>);
+    int getClass();
     void printOutput();
     double getError(Example&);
     double getError(TrainingSet&);

@@ -42,6 +42,15 @@ class BiasWeight : public Weight {
 
     void gradientDescent(double learningRate) {
       bias = optimizer->optimize(bias,fullDelta/batch_size,learningRate);
+      //cout << bias << endl;
+    }
+
+    double getWeight() {
+      return bias;
+    }
+
+    void setWeight(double w) {
+      bias = w;
     }
 
 };

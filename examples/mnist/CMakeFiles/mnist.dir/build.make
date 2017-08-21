@@ -97,6 +97,16 @@ mnist: /usr/local/lib/libopencv_shape.so.3.3.0
 mnist: /usr/local/lib/libopencv_stitching.so.3.3.0
 mnist: /usr/local/lib/libopencv_superres.so.3.3.0
 mnist: /usr/local/lib/libopencv_videostab.so.3.3.0
+mnist: /usr/lib/x86_64-linux-gnu/libsfml-system.so
+mnist: /usr/lib/x86_64-linux-gnu/libsfml-window.so
+mnist: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so
+mnist: /usr/lib/x86_64-linux-gnu/libsfml-network.so
+mnist: /usr/lib/x86_64-linux-gnu/libsfml-audio.so
+mnist: /usr/lib/x86_64-linux-gnu/libsfml-system.so
+mnist: /usr/lib/x86_64-linux-gnu/libsfml-window.so
+mnist: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so
+mnist: /usr/lib/x86_64-linux-gnu/libsfml-network.so
+mnist: /usr/lib/x86_64-linux-gnu/libsfml-audio.so
 mnist: /usr/local/lib/libopencv_calib3d.so.3.3.0
 mnist: /usr/local/lib/libopencv_features2d.so.3.3.0
 mnist: /usr/local/lib/libopencv_flann.so.3.3.0

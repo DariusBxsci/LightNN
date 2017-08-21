@@ -23,21 +23,24 @@ class SharedWeight {
     }
 
     void cloneWeights() { //make all weight vals the same
-        double cw = weights[0]->getWeight();
-        for(unsigned int x = 0; x < weights.size(); x++) {
-          weights[x]->setWeight(cw);
-        }
+      double cw = weights[0]->getWeight();
+      for(unsigned int x = 0; x < weights.size(); x++) {
+        weights[x]->setWeight(cw);
+      }
     }
 
     void cloneWeightDeltas() { //make all deltas the same
+        double sumFullDelt = 0;
         double sumDelt = 0;
         //cout << "SIZE " << weights.size() << endl;
         for(unsigned int x = 0; x < weights.size(); x++) {
-          sumDelt += weights[x]->getFullDelta();
+          sumFullDelt += weights[x]->getFullDelta();
+          sumDelt += weights[x]->getDelta();
         }
         //cout << sumDelt << endl;
         for(unsigned int x = 0; x < weights.size(); x++) {
-          weights[x]->setFullDelta(sumDelt/weights.size());
+          weights[x]->setFullDelta(sumFullDelt/weights.size());
+          weights[x]->setDelta(sumDelt/weights.size());
           //cout << "w " << weights[x]->getFullDelta() << endl;
         }
     }

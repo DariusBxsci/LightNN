@@ -121,6 +121,8 @@ fstream
 -
 typeinfo
 -
+iomanip
+-
 sstream
 -
 modules/module.h
